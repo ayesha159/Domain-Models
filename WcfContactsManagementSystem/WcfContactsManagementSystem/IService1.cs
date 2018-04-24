@@ -13,7 +13,16 @@ namespace WcfContactsManagementSystem
     public interface IService1
     {
 
-        
+        [OperationContract]
+        bool IsValidUser(string userName, string password);
+        [OperationContract]
+        void  IsUserRegister (string userName, string password);
+
+        //[OperationContract]
+        //bool AddGroup(string userId, string GrpName);
+
+
+
         //[OperationContract]
         //string GetData(int value);
 

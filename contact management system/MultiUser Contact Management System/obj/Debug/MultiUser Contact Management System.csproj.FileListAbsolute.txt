@@ -1,0 +1,145 @@
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.forgetPwd.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+D:\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+D:\MultiUser Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.forgetPwd.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+D:\MultiUser Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+D:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+D:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+D:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.forgetPwd.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+D:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+I:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+I:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+I:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.forgetPwd.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+I:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+H:\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+H:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+H:\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.forgetPwd.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmRecoverPWD.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2012\Projects\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmSendSMS.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmRecoverPWD.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmSendSMS.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+C:\Users\Administrator\Desktop\AJ\aj\Contact Management System\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmChangePwd.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmChangePwd.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmRecoverPWD.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmSendSMS.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+G:\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmChangePwd.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmRecoverPWD.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmSendSMS.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.CoreCompileInputs.cache
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.TEST_FORM.resources
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.CoreCompileInputs.cache
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+C:\Users\ayesha jabbar\Desktop\New folder\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb

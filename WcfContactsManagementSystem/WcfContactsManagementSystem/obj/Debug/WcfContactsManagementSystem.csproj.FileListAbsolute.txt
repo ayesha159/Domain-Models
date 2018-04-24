@@ -1,0 +1,13 @@
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+E:\usb data\Contact Management System 18-4-2018\MultiUser Contact Management System\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
