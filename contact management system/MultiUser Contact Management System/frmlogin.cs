@@ -72,8 +72,8 @@ namespace MultiUser_Contact_Management_System
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //frmRecoverPWD fr = new frmRecoverPWD();
-            //fr.ShowDialog();
+            frmRcvrPwd fr = new frmRcvrPwd();
+            fr.ShowDialog();
         }
     }
 } 

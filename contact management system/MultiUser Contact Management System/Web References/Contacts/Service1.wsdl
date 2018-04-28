@@ -18,6 +18,18 @@
   <wsdl:message name="IService1_IsUserRegister_OutputMessage">
     <wsdl:part name="parameters" element="tns:IsUserRegisterResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_RecoverPwdE_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPwdE" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RecoverPwdE_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPwdEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RecoverPwdS_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPwdS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_RecoverPwdS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverPwdSResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="IsValidUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsValidUser" message="tns:IService1_IsValidUser_InputMessage" />
@@ -26,6 +38,14 @@
     <wsdl:operation name="IsUserRegister">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsUserRegister" message="tns:IService1_IsUserRegister_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsUserRegisterResponse" message="tns:IService1_IsUserRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverPwdE">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RecoverPwdE" message="tns:IService1_RecoverPwdE_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RecoverPwdEResponse" message="tns:IService1_RecoverPwdE_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverPwdS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/RecoverPwdS" message="tns:IService1_RecoverPwdS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RecoverPwdSResponse" message="tns:IService1_RecoverPwdS_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -41,6 +61,24 @@
     </wsdl:operation>
     <wsdl:operation name="IsUserRegister">
       <soap:operation soapAction="http://tempuri.org/IService1/IsUserRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverPwdE">
+      <soap:operation soapAction="http://tempuri.org/IService1/RecoverPwdE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverPwdS">
+      <soap:operation soapAction="http://tempuri.org/IService1/RecoverPwdS" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

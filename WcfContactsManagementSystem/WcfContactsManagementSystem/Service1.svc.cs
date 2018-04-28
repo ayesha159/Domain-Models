@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using WcfContacts;
+
 
 namespace WcfContactsManagementSystem
 {
@@ -26,7 +26,7 @@ namespace WcfContactsManagementSystem
             }
             return isFound;
         }
-    public  void IsUserRegister(string userName, string password)
+    public  void IsUserRegister(string userName, string password, string Email,string MobileNo)
         {
             myUser u = new myUser();
             
@@ -41,10 +41,39 @@ namespace WcfContactsManagementSystem
             u.Userid = _lastUserid.ToString();
             u.Username = userName;
             u.Userpwd = password;
-
+            u.email = Email;
+            u.mobileno = MobileNo;
            dataClass.usersList.Add(u);
         }
 
+        public string RecoverPwdE(string email)
+        {
+            string zzz = "";
+
+            foreach (myUser u in dataClass.usersList)
+            {
+                if (email == u.email)
+                {
+                    return u.Userpwd;
+                }
+            }
+
+            return "invalid user or User no Registered with this email";
+        }
+
+        public string RecoverPwdS(string MobNo)
+        {
+            foreach (myUser u in dataClass.usersList)
+            {
+                if (MobNo == u.mobileno)
+                {
+                    return u.Userpwd;
+
+                }
+            }
+
+            return "invalid user or User no Registered with this Mobile No.";
+        }
         //public bool AddGroup(string userId, string GrpName)
         //{
 

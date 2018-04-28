@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WcfContacts
+namespace WcfContactsManagementSystem
 {
     public class myUser
     {
@@ -35,7 +35,28 @@ namespace WcfContacts
             set { _password = value; }
         }
 
-
+        private string Email;
+        public string email
+        {
+            get
+            {
+                return Email;
+            }
+            set
+            {
+                Email = value;
+            }
+        }
+        private string MobileNo;
+        public string mobileno
+        {
+            get
+            { return MobileNo; }
+            set
+            {
+                MobileNo = value;
+            }
+        }
         private bool _userIsAdmin;
 
         public bool UserIsAdmin

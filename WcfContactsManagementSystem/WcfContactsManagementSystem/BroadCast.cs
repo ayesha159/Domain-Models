@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiUser_Contact_Management_System
+namespace WcfContactsManagementSystem
 {
     class BroadCast
     {

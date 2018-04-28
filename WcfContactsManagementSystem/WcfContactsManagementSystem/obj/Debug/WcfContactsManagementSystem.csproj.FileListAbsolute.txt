@@ -11,3 +11,10 @@ C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagement
 C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
 C:\Users\ayesha jabbar\Desktop\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb

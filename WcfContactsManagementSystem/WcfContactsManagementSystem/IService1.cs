@@ -16,7 +16,13 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         bool IsValidUser(string userName, string password);
         [OperationContract]
-        void  IsUserRegister (string userName, string password);
+        void  IsUserRegister (string userName, string password ,string Email, string MobileNo);
+
+        [OperationContract]
+        string RecoverPwdE(string email);
+
+        [OperationContract]
+        string RecoverPwdS(string MobNo);
 
         //[OperationContract]
         //bool AddGroup(string userId, string GrpName);

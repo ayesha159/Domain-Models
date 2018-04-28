@@ -33,6 +33,10 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         private System.Threading.SendOrPostCallback IsUserRegisterOperationCompleted;
         
+        private System.Threading.SendOrPostCallback RecoverPwdEOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback RecoverPwdSOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -78,6 +82,12 @@ namespace MultiUser_Contact_Management_System.Contacts {
         public event IsUserRegisterCompletedEventHandler IsUserRegisterCompleted;
         
         /// <remarks/>
+        public event RecoverPwdECompletedEventHandler RecoverPwdECompleted;
+        
+        /// <remarks/>
+        public event RecoverPwdSCompletedEventHandler RecoverPwdSCompleted;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/IsValidUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public void IsValidUser([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, out bool IsValidUserResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool IsValidUserResultSpecified) {
             object[] results = this.Invoke("IsValidUser", new object[] {
@@ -111,31 +121,95 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/IsUserRegister", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void IsUserRegister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password) {
+        public void IsUserRegister([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Email, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MobileNo) {
             this.Invoke("IsUserRegister", new object[] {
                         userName,
-                        password});
+                        password,
+                        Email,
+                        MobileNo});
         }
         
         /// <remarks/>
-        public void IsUserRegisterAsync(string userName, string password) {
-            this.IsUserRegisterAsync(userName, password, null);
+        public void IsUserRegisterAsync(string userName, string password, string Email, string MobileNo) {
+            this.IsUserRegisterAsync(userName, password, Email, MobileNo, null);
         }
         
         /// <remarks/>
-        public void IsUserRegisterAsync(string userName, string password, object userState) {
+        public void IsUserRegisterAsync(string userName, string password, string Email, string MobileNo, object userState) {
             if ((this.IsUserRegisterOperationCompleted == null)) {
                 this.IsUserRegisterOperationCompleted = new System.Threading.SendOrPostCallback(this.OnIsUserRegisterOperationCompleted);
             }
             this.InvokeAsync("IsUserRegister", new object[] {
                         userName,
-                        password}, this.IsUserRegisterOperationCompleted, userState);
+                        password,
+                        Email,
+                        MobileNo}, this.IsUserRegisterOperationCompleted, userState);
         }
         
         private void OnIsUserRegisterOperationCompleted(object arg) {
             if ((this.IsUserRegisterCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.IsUserRegisterCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/RecoverPwdE", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string RecoverPwdE([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string email) {
+            object[] results = this.Invoke("RecoverPwdE", new object[] {
+                        email});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RecoverPwdEAsync(string email) {
+            this.RecoverPwdEAsync(email, null);
+        }
+        
+        /// <remarks/>
+        public void RecoverPwdEAsync(string email, object userState) {
+            if ((this.RecoverPwdEOperationCompleted == null)) {
+                this.RecoverPwdEOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecoverPwdEOperationCompleted);
+            }
+            this.InvokeAsync("RecoverPwdE", new object[] {
+                        email}, this.RecoverPwdEOperationCompleted, userState);
+        }
+        
+        private void OnRecoverPwdEOperationCompleted(object arg) {
+            if ((this.RecoverPwdECompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RecoverPwdECompleted(this, new RecoverPwdECompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/RecoverPwdS", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string RecoverPwdS([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MobNo) {
+            object[] results = this.Invoke("RecoverPwdS", new object[] {
+                        MobNo});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void RecoverPwdSAsync(string MobNo) {
+            this.RecoverPwdSAsync(MobNo, null);
+        }
+        
+        /// <remarks/>
+        public void RecoverPwdSAsync(string MobNo, object userState) {
+            if ((this.RecoverPwdSOperationCompleted == null)) {
+                this.RecoverPwdSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRecoverPwdSOperationCompleted);
+            }
+            this.InvokeAsync("RecoverPwdS", new object[] {
+                        MobNo}, this.RecoverPwdSOperationCompleted, userState);
+        }
+        
+        private void OnRecoverPwdSOperationCompleted(object arg) {
+            if ((this.RecoverPwdSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.RecoverPwdSCompleted(this, new RecoverPwdSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -195,6 +269,58 @@ namespace MultiUser_Contact_Management_System.Contacts {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     public delegate void IsUserRegisterCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void RecoverPwdECompletedEventHandler(object sender, RecoverPwdECompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RecoverPwdECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RecoverPwdECompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void RecoverPwdSCompletedEventHandler(object sender, RecoverPwdSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class RecoverPwdSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal RecoverPwdSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
 }
 
 #pragma warning restore 1591
