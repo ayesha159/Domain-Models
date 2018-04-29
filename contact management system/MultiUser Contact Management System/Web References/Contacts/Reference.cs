@@ -37,6 +37,8 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         private System.Threading.SendOrPostCallback RecoverPwdSOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ChangePwdOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -86,6 +88,9 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         public event RecoverPwdSCompletedEventHandler RecoverPwdSCompleted;
+        
+        /// <remarks/>
+        public event ChangePwdCompletedEventHandler ChangePwdCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/IsValidUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -214,6 +219,42 @@ namespace MultiUser_Contact_Management_System.Contacts {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ChangePwd", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void ChangePwd([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string Id, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string txtOld, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string txtNew, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string txtNewRe, out bool ChangePwdResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool ChangePwdResultSpecified) {
+            object[] results = this.Invoke("ChangePwd", new object[] {
+                        Id,
+                        txtOld,
+                        txtNew,
+                        txtNewRe});
+            ChangePwdResult = ((bool)(results[0]));
+            ChangePwdResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void ChangePwdAsync(string Id, string txtOld, string txtNew, string txtNewRe) {
+            this.ChangePwdAsync(Id, txtOld, txtNew, txtNewRe, null);
+        }
+        
+        /// <remarks/>
+        public void ChangePwdAsync(string Id, string txtOld, string txtNew, string txtNewRe, object userState) {
+            if ((this.ChangePwdOperationCompleted == null)) {
+                this.ChangePwdOperationCompleted = new System.Threading.SendOrPostCallback(this.OnChangePwdOperationCompleted);
+            }
+            this.InvokeAsync("ChangePwd", new object[] {
+                        Id,
+                        txtOld,
+                        txtNew,
+                        txtNewRe}, this.ChangePwdOperationCompleted, userState);
+        }
+        
+        private void OnChangePwdOperationCompleted(object arg) {
+            if ((this.ChangePwdCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ChangePwdCompleted(this, new ChangePwdCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -318,6 +359,40 @@ namespace MultiUser_Contact_Management_System.Contacts {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    public delegate void ChangePwdCompletedEventHandler(object sender, ChangePwdCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ChangePwdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ChangePwdCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool ChangePwdResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool ChangePwdResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
             }
         }
     }

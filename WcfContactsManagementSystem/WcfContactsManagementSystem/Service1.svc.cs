@@ -74,6 +74,70 @@ namespace WcfContactsManagementSystem
 
             return "invalid user or User no Registered with this Mobile No.";
         }
+
+
+
+        public bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe)
+        {
+            if (txtOld.Trim().Length == 0)
+            { return false; }
+            if (txtNew.Trim() != txtNewRe.Trim())
+            {
+                return false;
+            }
+            string _thisid = "";
+
+            foreach (myUser u in dataClass.usersList)
+            {
+
+                _thisid = u.Userid.ToString().Trim();
+                if (_thisid != Id)
+                {
+                    myUser ust = new myUser();
+
+                    ust.Userid = u.Userid;
+                    ust.Username = u.Username; // error fixed
+                    ust.email = u.email;
+                    ust.mobileno = u.mobileno;
+                    ust.Userpwd = u.Userpwd;
+                    dataClass.usersListTemp.Add(ust);
+                }
+                else
+                {
+                    myUser ust = new myUser();
+                    ust.Userid = u.Userid;
+                    ust.Username = u.Username;// error fixed
+                    ust.email = u.email;
+                    ust.mobileno = u.mobileno;
+                    ust.Userpwd = txtNew.Trim();
+                    dataClass.usersListTemp.Add(ust);
+                }
+            }
+            int tc = 0;
+            foreach (myUser us in dataClass.usersList)
+            {
+                tc++;
+            }
+            dataClass.usersList.RemoveRange(0, tc);
+
+            foreach (myUser uout in dataClass.usersListTemp)
+            {
+                myUser us = new myUser();
+                us.Userid = uout.Userid;
+                us.Username = uout.Username;// error fixed
+                us.email = uout.email;
+                us.mobileno = uout.mobileno;
+                us.Userpwd = uout.Userpwd;
+                // dataClass.usersListTemp.Add(us); // error fixed 
+                dataClass.usersList.Add(us);
+
+            }
+
+            // _name = myGrp.GrpName.ToString();
+
+            return true;
+
+        }
         //public bool AddGroup(string userId, string GrpName)
         //{
 

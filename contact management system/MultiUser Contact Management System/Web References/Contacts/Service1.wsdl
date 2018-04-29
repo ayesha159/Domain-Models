@@ -30,6 +30,12 @@
   <wsdl:message name="IService1_RecoverPwdS_OutputMessage">
     <wsdl:part name="parameters" element="tns:RecoverPwdSResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_ChangePwd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePwd" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangePwd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePwdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="IsValidUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsValidUser" message="tns:IService1_IsValidUser_InputMessage" />
@@ -46,6 +52,10 @@
     <wsdl:operation name="RecoverPwdS">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/RecoverPwdS" message="tns:IService1_RecoverPwdS_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/RecoverPwdSResponse" message="tns:IService1_RecoverPwdS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChangePwd" message="tns:IService1_ChangePwd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChangePwdResponse" message="tns:IService1_ChangePwd_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -79,6 +89,15 @@
     </wsdl:operation>
     <wsdl:operation name="RecoverPwdS">
       <soap:operation soapAction="http://tempuri.org/IService1/RecoverPwdS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePwd">
+      <soap:operation soapAction="http://tempuri.org/IService1/ChangePwd" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

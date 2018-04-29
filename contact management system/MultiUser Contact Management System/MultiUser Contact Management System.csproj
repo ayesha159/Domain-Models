@@ -52,17 +52,23 @@
     <Compile Include="frmain.Designer.cs">
       <DependentUpon>frmain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChangePwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePwd.designer.cs">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmlogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRecoverPWD.cs">
+    <Compile Include="frmRcvrPwd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRecoverPWD.designer.cs">
-      <DependentUpon>frmRecoverPWD.cs</DependentUpon>
+    <Compile Include="frmRcvrPwd.Designer.cs">
+      <DependentUpon>frmRcvrPwd.cs</DependentUpon>
     </Compile>
     <Compile Include="MyPanel.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,8 @@
     <Compile Include="MyPanel.designer.cs">
       <DependentUpon>MyPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="myUser.cs" />
+    <Compile Include="myUtill.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmregister.cs">
@@ -87,11 +95,14 @@
     <EmbeddedResource Include="frmain.resx">
       <DependentUpon>frmain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePwd.resx">
+      <DependentUpon>frmChangePwd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRecoverPWD.resx">
-      <DependentUpon>frmRecoverPWD.cs</DependentUpon>
+    <EmbeddedResource Include="frmRcvrPwd.resx">
+      <DependentUpon>frmRcvrPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyPanel.resx">
       <DependentUpon>MyPanel.cs</DependentUpon>

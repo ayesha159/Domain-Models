@@ -24,6 +24,9 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         string RecoverPwdS(string MobNo);
 
+        [OperationContract]
+        bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe);
+
         //[OperationContract]
         //bool AddGroup(string userId, string GrpName);
 

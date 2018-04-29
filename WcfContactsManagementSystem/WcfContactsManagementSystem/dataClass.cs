@@ -12,5 +12,6 @@ namespace WcfContactsManagementSystem
         public static ArrayList usersGroupsArrayList = new ArrayList();
         public static ArrayList usersContactsArrayList = new ArrayList();
         public static ArrayList smsArrayList = new ArrayList();
+        public static ArrayList usersListTemp = new ArrayList();
     }
 }

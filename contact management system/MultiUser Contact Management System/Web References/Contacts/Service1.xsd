@@ -58,4 +58,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ChangePwd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtOld" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtNew" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtNewRe" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePwdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePwdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
