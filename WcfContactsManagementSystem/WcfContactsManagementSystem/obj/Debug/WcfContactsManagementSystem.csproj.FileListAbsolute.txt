@@ -18,3 +18,6 @@ C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfCont
 C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
 C:\Users\ayesha jabbar\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb

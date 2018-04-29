@@ -36,43 +36,11 @@ namespace MultiUser_Contact_Management_System
                 
             }
 
-
-            //Boolean isFound = false;
-            //foreach (myUser u in DataClass.usersArrayList)
-            //{
-            //    if (u.Username == txt_user.Text && u.Userpwd == txt_pwd.Text)
-            //    {
-            //        isFound = true;
-            //        MyUtill.loginUser = u;
-
-            //    }
-            //}
-
-            //if (isFound)
-            //{
-
-            //    lblMsg.Text = "valid user";
-
-
-            //FrmContacts log = new FrmContacts();
-            //this.Hide();
-            //log.Show();
-
-            //MyPanel pnl = new MyPanel();
-
-            //pnl.ShowDialog();
-
-            //}
-            //else
-            //{
-            //    lblMsg.Text = "invalid user";
-            //}
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmRcvrPwd fr = new frmRcvrPwd();
+            frmRecoverPWD fr = new frmRecoverPWD();
             fr.ShowDialog();
         }
     }

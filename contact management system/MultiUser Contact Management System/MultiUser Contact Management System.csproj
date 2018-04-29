@@ -58,11 +58,17 @@
     <Compile Include="frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRcvrPwd.cs">
+    <Compile Include="frmRecoverPWD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRcvrPwd.Designer.cs">
-      <DependentUpon>frmRcvrPwd.cs</DependentUpon>
+    <Compile Include="frmRecoverPWD.designer.cs">
+      <DependentUpon>frmRecoverPWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyPanel.designer.cs">
+      <DependentUpon>MyPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +90,11 @@
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRcvrPwd.resx">
-      <DependentUpon>frmRcvrPwd.cs</DependentUpon>
+    <EmbeddedResource Include="frmRecoverPWD.resx">
+      <DependentUpon>frmRecoverPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPanel.resx">
+      <DependentUpon>MyPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
