@@ -138,9 +138,44 @@ namespace WcfContactsManagementSystem
             return true;
 
         }
-        //public bool AddGroup(string userId, string GrpName)
-        //{
 
-        //}
+        public bool AddContact()
+        {
+            int _id = 0;
+            string _name = "";
+
+            foreach (myContacts myCon in dataClass.usersContactsArrayList)
+            {
+                _id = Convert.ToInt16(myCon.conId.ToString());
+                _name = myCon.ConName.ToString();
+            }
+            if (_id == 0) _id = 1;
+            else _id++;
+
+            return true;
+        }
+        public bool DeleteContact(string delgrp)
+        {
+
+            dataClass.usersContactsArrayList.RemoveAt(Convert.ToInt16(delgrp));
+            return true;
+          
+
+        }
+        public bool UpdateContacts()
+        {
+
+            int tc = 0;
+            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            {
+                tc++;
+
+            }
+            
+            dataClass.usersContactsArrayList.RemoveRange(0, tc);
+
+            return true;
+        }
+
     }
 }

@@ -25,3 +25,14 @@ C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagement
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\mscorlib.dll
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normidna.nlp
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfc.nlp
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfd.nlp
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkc.nlp
+C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkd.nlp

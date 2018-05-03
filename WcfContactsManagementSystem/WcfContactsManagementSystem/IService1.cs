@@ -27,6 +27,16 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe);
 
+        [OperationContract]
+        bool AddContact();
+        [OperationContract]
+
+        bool DeleteContact(string delgrp);
+        [OperationContract]
+        bool UpdateContacts();
+
+
+
         //[OperationContract]
         //bool AddGroup(string userId, string GrpName);
 
