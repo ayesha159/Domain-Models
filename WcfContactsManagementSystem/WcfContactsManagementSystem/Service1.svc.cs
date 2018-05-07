@@ -219,9 +219,14 @@ namespace WcfContactsManagementSystem
         }
 
 
+        public List<myContacts> GetCon()
+        {
+            return dataClass.usersContactsArrayList;
+
+        }
 
 
-        public bool AddContact()
+        public bool AddContact(string name, string DOB, string moblieNo, string email, string address)
         {
             int _id = 0;
             string _name = "";
@@ -234,33 +239,82 @@ namespace WcfContactsManagementSystem
             if (_id == 0) _id = 1;
             else _id++;
 
+            myContacts con = new myContacts();
+            con.Userid = myUtill.loginUser.Userid;
+            con.conId = _id.ToString();
+            con.ConName = name;
+            con.ConDob = DOB;
+            con.ConMob = moblieNo;
+            con.ConEmail = email;
+            con.ConAddr = address;
+            dataClass.usersContactsArrayList.Add(con);
+
             return true;
         }
-        public bool DeleteContact(string delgrp)
+        public bool DeleteContact(string idcon)
         {
 
-            dataClass.usersContactsArrayList.RemoveAt(Convert.ToInt16(delgrp));
-            return true;
-
-
-        }
-        public bool UpdateContacts()
-        {
-
-            int tc = 0;
-            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            int b = 0;
+            foreach (myContacts c in dataClass.usersContactsArrayList)
             {
-                tc++;
+                if (c.conId == idcon)
+                {
+                    break;
+                }
+                b++;
+            }
+            dataClass.usersGroupsArrayList.RemoveAt(Convert.ToInt16(b));
 
+            return true;
+
+        }
+        public bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address)
+        {
+            int tc = 0;
+            // algo1
+            foreach (myContacts con in dataClass.usersContactsArrayList)
+            {
+
+                myContacts myCon1 = new myContacts();
+                myCon1.conId = con.conId;
+
+                if (conid != con.conId)
+                {
+                    myCon1.ConName = con.ConName;
+                    myCon1.ConDob = con.ConDob;
+                    myCon1.ConMob = con.ConMob;
+                    myCon1.ConAddr = con.ConAddr;
+                    myCon1.ConEmail = con.ConEmail;
+
+                }
+                else
+                {
+                    myCon1.ConName = name;
+                    myCon1.ConDob = DOB;
+                    myCon1.ConMob = moblieNo;
+                    myCon1.ConAddr = address;
+                    myCon1.ConEmail = email;
+                }
+                dataClass.usersContactsArrayListtmp.Add(myCon1);
             }
 
-            dataClass.usersContactsArrayList.RemoveRange(0, tc);
-
+            dataClass.usersContactsArrayList.Clear();
+            foreach(myContacts c in dataClass.usersContactsArrayListtmp)
+            {
+                myContacts co = new myContacts();
+                co.conId = c.conId;
+                co.ConName = c.ConName;
+                co.ConDob = c.ConDob;
+                co.ConMob = c.ConMob;
+                co.ConAddr = c.ConAddr;
+                co.ConEmail = c.ConEmail;
+                dataClass.usersContactsArrayList.Add(co);
+            }
+            dataClass.usersContactsArrayListtmp.Clear();
+            //dataClass.usersGroupsArrayList.RemoveRange(0, tc);
             return true;
         }
 
+
     }
-
-
-
 }

@@ -31,11 +31,11 @@ namespace WcfContactsManagementSystem
         [OperationContract]
 
         bool AddGroup(string GrpName , ref string userId);
-
-        bool AddContact();
+        [OperationContract]
+        bool AddContact(string name,string DOB,string moblieNo, string email,string address);
         [OperationContract]
 
-        bool DeleteContact(string delgrp);
+        bool DeleteContact(string idcon);
         [OperationContract]
         bool UpdateContacts();
 
@@ -53,6 +53,9 @@ namespace WcfContactsManagementSystem
 
         [OperationContract]
         List<myGroup> GetData();
+
+        [OperationContract]
+        List<myContacts> GetCon();
         //[OperationContract]
         //string GetData(int value);
 
