@@ -171,3 +171,5 @@ C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\contact management sy
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+C:\Users\ayesha jabbar\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmChangePwd.resources
+C:\Users\ayesha jabbar\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources

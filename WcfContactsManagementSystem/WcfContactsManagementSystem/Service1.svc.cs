@@ -5,19 +5,20 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Collections;
 
 
 namespace WcfContactsManagementSystem
 {
-    
+
     public class Service1 : IService1
     {
-      public   bool IsValidUser(string userName, string password)
+        public bool IsValidUser(string userName, string password,ref string curUsr)
         {
             Boolean isFound = false;
             foreach (myUser u in dataClass.usersList)
             {
-                if (u.Username == userName  && u.Userpwd ==password)
+                if (u.Username == userName && u.Userpwd == password)
                 {
                     isFound = true;
                     myUtill.loginUser = u;
@@ -26,15 +27,15 @@ namespace WcfContactsManagementSystem
             }
             return isFound;
         }
-    public  void IsUserRegister(string userName, string password, string Email,string MobileNo)
+        public void IsUserRegister(string userName, string password, string Email, string MobileNo)
         {
             myUser u = new myUser();
-            
+
             int _lastUserid = 1;
             foreach (myUser usr in dataClass.usersList)
             {
                 _lastUserid = Convert.ToInt16(usr.Userid);
-               
+
             }
             _lastUserid++;
 
@@ -43,13 +44,11 @@ namespace WcfContactsManagementSystem
             u.Userpwd = password;
             u.email = Email;
             u.mobileno = MobileNo;
-           dataClass.usersList.Add(u);
+            dataClass.usersList.Add(u);
         }
 
         public string RecoverPwdE(string email)
         {
-            string zzz = "";
-
             foreach (myUser u in dataClass.usersList)
             {
                 if (email == u.email)
@@ -138,9 +137,88 @@ namespace WcfContactsManagementSystem
             return true;
 
         }
-        //public bool AddGroup(string userId, string GrpName)
-        //{
+        public bool AddGroup(string GrpName, ref string userId)
+        {
+            int _id = 0;
+            string _name = "";
 
-        //}
-    }
+            foreach (myGroup myG in dataClass.usersGroupsArrayList)
+               
+            {
+                _id = Convert.ToInt16(myG.GrpId.ToString());
+                _name = myG.GrpName.ToString();
+            }
+            if (_id == 0) _id = 1;
+            else _id++;
+
+            myGroup g = new myGroup();
+
+            g.GrpName = GrpName;
+            g.GrpId = _id.ToString();
+
+            g.Userid = myUtill.loginUser.Userid;
+
+            dataClass.usersGroupsArrayList.Add(g);
+            return true;
+
+
+        }
+
+        public bool DeleteGroup(string idgrp)
+        {
+            int c = 0;
+           foreach(myGroup  grp in dataClass.usersGroupsArrayList)
+            {
+                if (grp.GrpId == idgrp)
+                {
+                    break;
+                }
+                c++;
+            }
+            dataClass.usersGroupsArrayList.RemoveAt(Convert.ToInt16(c));
+            return true;
+        }
+        public bool UpdateGroup(string grpid,string grpname)
+        {
+            int tc = 0;
+            // algo1
+            foreach (myGroup myGrp in dataClass.usersGroupsArrayList)
+            {
+
+                myGroup myGrp1 = new myGroup();
+                myGrp1.GrpId = myGrp.GrpId;
+
+                if (grpid != myGrp.GrpId)
+                {
+                    myGrp1.GrpName = myGrp.GrpName;
+                }
+                else
+                    myGrp1.GrpName = grpname;                
+                dataClass.usersGroupsArrayListtmp.Add(myGrp1);
+                
+                }
+            
+          dataClass.usersGroupsArrayList.Clear();
+          
+        foreach(myGroup g in dataClass.usersGroupsArrayListtmp)
+            {
+                myGroup myGrp1 = new myGroup();
+                myGrp1.GrpId = g.GrpId;
+                myGrp1.GrpName = g.GrpName;
+                dataClass.usersGroupsArrayList.Add(myGrp1);
+            }
+            dataClass.usersGroupsArrayListtmp.Clear();
+            //dataClass.usersGroupsArrayList.RemoveRange(0, tc);
+            return true;
+        }
+
+       public List<myGroup> GetData()
+        {
+            return dataClass.usersGroupsArrayList;
+
+        }
+        }
+
 }
+
+

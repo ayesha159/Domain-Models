@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Collections;
 
 namespace WcfContactsManagementSystem
 {
@@ -14,7 +15,7 @@ namespace WcfContactsManagementSystem
     {
 
         [OperationContract]
-        bool IsValidUser(string userName, string password);
+        bool IsValidUser(string userName, string password,ref string curUsr);
         [OperationContract]
         void  IsUserRegister (string userName, string password ,string Email, string MobileNo);
 
@@ -27,11 +28,17 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe);
 
-        //[OperationContract]
-        //bool AddGroup(string userId, string GrpName);
+        [OperationContract]
+        bool AddGroup(string GrpName , ref string userId);
 
+        [OperationContract]
+        bool DeleteGroup(string delGrp);
 
+        [OperationContract]
+        bool UpdateGroup(string grpid, string grpname);
 
+        [OperationContract]
+        List<myGroup> GetData();
         //[OperationContract]
         //string GetData(int value);
 
