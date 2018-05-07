@@ -22,13 +22,26 @@ namespace MultiUser_Contact_Management_System
 
             bool isvalidUser = false;
             bool isvalidPwd = false;
+           
             Contacts.Service1 ser = new Contacts.Service1();
+            string curUsris = "";
 
-            ser.IsValidUser(txt_user.Text, txt_pwd.Text, out isvalidUser, out isvalidPwd);
+            ser.IsValidUser(txt_user.Text, txt_pwd.Text, ref curUsris, out isvalidUser, out isvalidPwd);
 
             if (isvalidUser)
             {
-                MessageBox.Show("valid user");
+                lblMsg.Text = "valid user";
+
+                myUser u = new myUser();
+                u.Userid = curUsris;
+                DataClass.usersCurrent.Add(u);
+                foreach (myUser ux in DataClass.usersCurrent)
+                {
+                    myUtill.loginUser = ux;
+                }
+
+                MyPanel pnl = new MyPanel();
+                pnl.ShowDialog();
             }
             else
             {
@@ -58,9 +71,7 @@ namespace MultiUser_Contact_Management_System
             //this.Hide();
             //log.Show();
 
-            //MyPanel pnl = new MyPanel();
 
-            //pnl.ShowDialog();
 
             //}
             //else

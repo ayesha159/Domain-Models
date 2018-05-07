@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClass.cs" />
     <Compile Include="frmain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,13 @@
     </Compile>
     <Compile Include="frmRcvrPwd.Designer.cs">
       <DependentUpon>frmRcvrPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGroup.cs" />
+    <Compile Include="MyGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyGroups.designer.cs">
+      <DependentUpon>MyGroups.cs</DependentUpon>
     </Compile>
     <Compile Include="MyPanel.cs">
       <SubType>Form</SubType>
@@ -104,6 +112,9 @@
     <EmbeddedResource Include="frmRcvrPwd.resx">
       <DependentUpon>frmRcvrPwd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyGroups.resx">
+      <DependentUpon>MyGroups.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyPanel.resx">
       <DependentUpon>MyPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +139,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\Contacts\myGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Contacts\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -137,6 +151,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\Contacts\Service10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Contacts\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

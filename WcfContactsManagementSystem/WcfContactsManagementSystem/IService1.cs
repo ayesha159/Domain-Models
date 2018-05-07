@@ -29,9 +29,9 @@ namespace WcfContactsManagementSystem
         bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe);
 
         [OperationContract]
-<<<<<<< HEAD
+
         bool AddGroup(string GrpName , ref string userId);
-=======
+
         bool AddContact();
         [OperationContract]
 
@@ -43,7 +43,7 @@ namespace WcfContactsManagementSystem
 
         //[OperationContract]
         //bool AddGroup(string userId, string GrpName);
->>>>>>> 56a6582681a85639c5e22b6f9d8600930c342531
+
 
         [OperationContract]
         bool DeleteGroup(string delGrp);

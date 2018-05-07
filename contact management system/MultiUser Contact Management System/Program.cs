@@ -13,6 +13,7 @@ namespace MultiUser_Contact_Management_System
         /// </summary>
         [STAThread]
         static void Main()
+
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

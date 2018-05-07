@@ -1,78 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="IsValidUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="IsValidUserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="IsValidUserResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="IsUserRegister">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="IsUserRegisterResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecoverPwdE">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecoverPwdEResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="RecoverPwdEResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecoverPwdS">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="MobNo" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RecoverPwdSResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="RecoverPwdSResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ChangePwd">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="txtOld" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="txtNew" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="txtNewRe" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ChangePwdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ChangePwdResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfmyGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="myGroup" nillable="true" type="tns:myGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmyGroup" nillable="true" type="tns:ArrayOfmyGroup" />
+  <xs:complexType name="myGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GrpId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="myGroup" nillable="true" type="tns:myGroup" />
 </xs:schema>

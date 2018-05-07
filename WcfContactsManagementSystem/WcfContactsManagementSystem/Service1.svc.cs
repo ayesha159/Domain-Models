@@ -13,7 +13,7 @@ namespace WcfContactsManagementSystem
 
     public class Service1 : IService1
     {
-        public bool IsValidUser(string userName, string password,ref string curUsr)
+        public bool IsValidUser(string userName, string password, ref string curUsr)
         {
             Boolean isFound = false;
             foreach (myUser u in dataClass.usersList)
@@ -137,14 +137,13 @@ namespace WcfContactsManagementSystem
             return true;
 
         }
-<<<<<<< HEAD
+
         public bool AddGroup(string GrpName, ref string userId)
         {
             int _id = 0;
             string _name = "";
 
             foreach (myGroup myG in dataClass.usersGroupsArrayList)
-               
             {
                 _id = Convert.ToInt16(myG.GrpId.ToString());
                 _name = myG.GrpName.ToString();
@@ -168,7 +167,7 @@ namespace WcfContactsManagementSystem
         public bool DeleteGroup(string idgrp)
         {
             int c = 0;
-           foreach(myGroup  grp in dataClass.usersGroupsArrayList)
+            foreach (myGroup grp in dataClass.usersGroupsArrayList)
             {
                 if (grp.GrpId == idgrp)
                 {
@@ -179,7 +178,7 @@ namespace WcfContactsManagementSystem
             dataClass.usersGroupsArrayList.RemoveAt(Convert.ToInt16(c));
             return true;
         }
-        public bool UpdateGroup(string grpid,string grpname)
+        public bool UpdateGroup(string grpid, string grpname)
         {
             int tc = 0;
             // algo1
@@ -194,14 +193,14 @@ namespace WcfContactsManagementSystem
                     myGrp1.GrpName = myGrp.GrpName;
                 }
                 else
-                    myGrp1.GrpName = grpname;                
+                    myGrp1.GrpName = grpname;
                 dataClass.usersGroupsArrayListtmp.Add(myGrp1);
-                
-                }
-            
-          dataClass.usersGroupsArrayList.Clear();
-          
-        foreach(myGroup g in dataClass.usersGroupsArrayListtmp)
+
+            }
+
+            dataClass.usersGroupsArrayList.Clear();
+
+            foreach (myGroup g in dataClass.usersGroupsArrayListtmp)
             {
                 myGroup myGrp1 = new myGroup();
                 myGrp1.GrpId = g.GrpId;
@@ -213,14 +212,14 @@ namespace WcfContactsManagementSystem
             return true;
         }
 
-       public List<myGroup> GetData()
+        public List<myGroup> GetData()
         {
             return dataClass.usersGroupsArrayList;
 
         }
-        }
 
-=======
+
+
 
         public bool AddContact()
         {
@@ -242,7 +241,7 @@ namespace WcfContactsManagementSystem
 
             dataClass.usersContactsArrayList.RemoveAt(Convert.ToInt16(delgrp));
             return true;
-          
+
 
         }
         public bool UpdateContacts()
@@ -254,14 +253,14 @@ namespace WcfContactsManagementSystem
                 tc++;
 
             }
-            
+
             dataClass.usersContactsArrayList.RemoveRange(0, tc);
 
             return true;
         }
 
     }
->>>>>>> 56a6582681a85639c5e22b6f9d8600930c342531
+
+
+
 }
-
-

@@ -25,9 +25,9 @@ namespace MultiUser_Contact_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //MyGroups grp = new MyGroups();
-        
-            //grp.ShowDialog(); 
+            MyGroups grp = new MyGroups();
+
+            grp.ShowDialog();
         }
 
         private void btn_con_Click(object sender, EventArgs e)
