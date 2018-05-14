@@ -38,12 +38,6 @@ namespace WcfContactsManagementSystem
         bool DeleteContact(string idcon);
         [OperationContract]
         bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address);
-      
-
-
-        //[OperationContract]
-        //bool AddGroup(string userId, string GrpName);
-
 
         [OperationContract]
         bool DeleteGroup(string delGrp);
@@ -75,6 +69,16 @@ namespace WcfContactsManagementSystem
 
         [OperationContract]
         List<myContacts> GetCon();
+        [OperationContract]
+        List<myContacts> ShowAllContacts(string userId, string grpId);
+        [OperationContract]
+        List<myContacts> ShowGrpContacts(string userId, string grpId);
+        [OperationContract]
+        List<myContacts> SSTC(string userid, string grpid);
+        [OperationContract]
+        List<myContacts> SSTG(string userid, string grpid);
+       
+
         //[OperationContract]
         //string GetData(int value);
 

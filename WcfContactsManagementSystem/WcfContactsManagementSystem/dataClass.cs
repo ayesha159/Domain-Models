@@ -8,12 +8,13 @@ namespace WcfContactsManagementSystem
 {
     public class dataClass
     {
-        public static ArrayList usersList = new ArrayList();
+        public static List<myUser> usersList = new List<myUser>();
         public static List<myGroup> usersGroupsArrayList = new List<myGroup>();
         public static ArrayList usersGroupsArrayListtmp = new ArrayList();
         public static List<myContacts> usersContactsArrayList = new List<myContacts>();
-        public static ArrayList usersContactsArrayListtmp = new ArrayList();
-        public static List<myContacts> SearchList = new List<myContacts>();
+        public static List<myContacts> usersContactsArrayListtmp = new List<myContacts>();
+        public static ArrayList smsArrayList = new ArrayList();
         public static ArrayList usersListTemp = new ArrayList();
-    
+        public static List<myContacts> SearchList = new List<myContacts>();
+    }
 }
