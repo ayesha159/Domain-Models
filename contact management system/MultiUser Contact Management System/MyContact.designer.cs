@@ -334,7 +334,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MultiUser_Contact_Management_System.Properties.Resources.users_png_image_78357;
             this.pictureBox1.Location = new System.Drawing.Point(555, 57);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 137);
@@ -348,7 +347,7 @@
             this.btnClr.Name = "btnClr";
             this.btnClr.Size = new System.Drawing.Size(71, 30);
             this.btnClr.TabIndex = 26;
-            this.btnClr.Text = "Clear";
+            this.btnClr.Text = "ShowAll";
             this.btnClr.UseVisualStyleBackColor = true;
             this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
             // 
