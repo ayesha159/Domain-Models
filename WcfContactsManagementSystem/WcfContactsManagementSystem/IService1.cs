@@ -30,16 +30,15 @@ namespace WcfContactsManagementSystem
 
         [OperationContract]
 
-        bool AddGroup(string GrpName , ref string userId);
+        bool AddGroup(string GrpName , ref string userId );
         [OperationContract]
-        bool AddContact(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address);
+        bool AddContact(string userId, string grpId, string name,string DOB,string moblieNo, string email,string address);
         [OperationContract]
 
         bool DeleteContact(string idcon);
         [OperationContract]
         bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address);
-
-        [OperationContract]
+           [OperationContract]
         bool DeleteGroup(string delGrp);
 
         [OperationContract]
@@ -48,9 +47,15 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         List<myGroup> GetData();
 
+
+        [OperationContract]
+        List<myContacts> GetCon();
+
         [OperationContract]
         string ImportContacts(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId);
-        
+        [OperationContract]
+      
+        List<myContacts> SSTG(string userid, string grpid);
 
         [OperationContract]
         List<myContacts> SearchCbyName(string userId, string grpId, string name);
@@ -62,30 +67,17 @@ namespace WcfContactsManagementSystem
 
         [OperationContract]
         List<myContacts> SearchCbyEmail(string userId, string grpId, string email);
-       
+        [OperationContract]
+        List<myContacts> ShowContactsSMS(string userId, string grpId);
         [OperationContract]
         List<myContacts> SearchCbyMob(string userId, string grpId, string mob);
 
-
-        [OperationContract]
-        List<myContacts> GetCon();
-        [OperationContract]
-        List<myContacts> ShowAllContacts(string userId, string grpId);
-        [OperationContract]
-        List<myContacts> ShowGrpContacts(string userId, string grpId);
         [OperationContract]
         List<myContacts> SSTC(string userid, string grpid);
         [OperationContract]
-        List<myContacts> SSTG(string userid, string grpid);
-       
+        List<myContacts> ShowAllContacts(string userId, string grpId);
 
-        //[OperationContract]
-        //string GetData(int value);
 
-        //[OperationContract]
-        //CompositeType GetDataUsingDataContract(CompositeType composite);
-
-        //// TODO: Add your service operations here
     }
 
 

@@ -22,7 +22,7 @@ namespace WcfContactsManagementSystem
                 {
                     isFound = true;
                     myUtill.loginUser = u;
-
+                    curUsr = u.Userid;
                 }
             }
             return isFound;
@@ -140,7 +140,6 @@ namespace WcfContactsManagementSystem
         {
             int _id = 0;
             string _name = "";
-
             foreach (myGroup myG in dataClass.usersGroupsArrayList)
             {
                 _id = Convert.ToInt16(myG.GrpId.ToString());
@@ -150,16 +149,12 @@ namespace WcfContactsManagementSystem
             else _id++;
 
             myGroup g = new myGroup();
-
             g.GrpName = GrpName;
             g.GrpId = _id.ToString();
-
             g.Userid = myUtill.loginUser.Userid;
-
+ 
             dataClass.usersGroupsArrayList.Add(g);
             return true;
-
-
         }
 
         public bool DeleteGroup(string idgrp)
@@ -178,7 +173,7 @@ namespace WcfContactsManagementSystem
         }
         public bool UpdateGroup(string grpid, string grpname)
         {
-            int tc = 0;
+           ;
             // algo1
             foreach (myGroup myGrp in dataClass.usersGroupsArrayList)
             {
@@ -191,7 +186,8 @@ namespace WcfContactsManagementSystem
                     myGrp1.GrpName = myGrp.GrpName;
                 }
                 else
-                    myGrp1.GrpName = grpname;
+                myGrp1.GrpName = grpname;
+
                 dataClass.usersGroupsArrayListtmp.Add(myGrp1);
 
             }
@@ -213,10 +209,8 @@ namespace WcfContactsManagementSystem
         public List<myGroup> GetData()
         {
             return dataClass.usersGroupsArrayList;
-
         }
-
-
+        
         public List<myContacts> GetCon()
         {
             return dataClass.usersContactsArrayList;
@@ -268,7 +262,7 @@ namespace WcfContactsManagementSystem
         }
         public bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address)
         {
-            // algo1
+                       // algo1
             foreach (myContacts con in dataClass.usersContactsArrayList)
             {
 
@@ -296,7 +290,7 @@ namespace WcfContactsManagementSystem
             }
 
             dataClass.usersContactsArrayList.Clear();
-            foreach (myContacts c in dataClass.usersContactsArrayListtmp)
+            foreach(myContacts c in dataClass.usersContactsArrayListtmp)
             {
                 myContacts co = new myContacts();
                 co.conId = c.conId;
@@ -354,7 +348,7 @@ namespace WcfContactsManagementSystem
                         {
                             string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
                             dataClass.SearchList.Add(mc);
-
+                           
                         }
                     }
                 }
@@ -362,7 +356,50 @@ namespace WcfContactsManagementSystem
             }
             return dataClass.SearchList;
         }
+      
+        public  List<myContacts> SSTG(string userid,string grpid)
+        {
+                foreach (myContacts c in dataClass.usersContactsArrayList)
+                {
+                   if (userid==c.Userid & grpid == c.GrpId)
+                   {
+                    myContacts con = new myContacts();
+                    con.Userid = c.Userid;
+                    con.GrpId = c.GrpId;
+                    con.conId = c.conId;
+                    con.ConName = c.ConName;
+                    con.ConDob = c.ConDob;
+                    con.ConMob = c.ConMob;
+                    con.ConEmail = c.ConEmail;
+                    con.ConAddr = c.ConAddr;
+                    dataClass.usersContactsArrayListtmp.Add(con);
+                }
+                }
+            
+            return dataClass.usersContactsArrayListtmp;
+        }
 
+        public List<myContacts> SSTC( string userid, string grpid)
+        {
+            foreach (myContacts c in dataClass.usersContactsArrayList)
+            {
+                if (userid == c.Userid)
+                {
+                    myContacts con = new myContacts();
+                    con.Userid = c.Userid;
+                    con.GrpId = c.GrpId;
+                    con.conId = c.conId;
+                    con.ConName = c.ConName;
+                    con.ConDob = c.ConDob;
+                    con.ConMob = c.ConMob;
+                    con.ConEmail = c.ConEmail;
+                    con.ConAddr = c.ConAddr;
+                    dataClass.usersContactsArrayListtmp.Add(con);
+                }
+            }
+
+            return dataClass.usersContactsArrayListtmp;
+        }
 
         public List<myContacts> SearchCbyDob(string userId, string grpId, string dob)
         {
@@ -434,7 +471,6 @@ namespace WcfContactsManagementSystem
             }
             return dataClass.SearchList;
         }
-
         public List<myContacts> ShowAllContacts(string userId, string grpId)
         {
             dataClass.SearchList.Clear();
@@ -444,9 +480,9 @@ namespace WcfContactsManagementSystem
                 string gpid = mc.GrpId.ToString().Trim();
                 if (userId == usid)
                 {
-
-                    string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
-                    dataClass.SearchList.Add(mc);
+                    
+                        string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
+                        dataClass.SearchList.Add(mc);
                 }
 
             }
@@ -472,50 +508,6 @@ namespace WcfContactsManagementSystem
             }
             return dataClass.SearchList;
         }
-        public List<myContacts> SSTG(string userid, string grpid)
-        {
-            foreach (myContacts c in dataClass.usersContactsArrayList)
-            {
-                if (userid == c.Userid & grpid == c.GrpId)
-                {
-                    myContacts con = new myContacts();
-                    con.Userid = c.Userid;
-                    con.GrpId = c.GrpId;
-                    con.conId = c.conId;
-                    con.ConName = c.ConName;
-                    con.ConDob = c.ConDob;
-                    con.ConMob = c.ConMob;
-                    con.ConEmail = c.ConEmail;
-                    con.ConAddr = c.ConAddr;
-                    dataClass.usersContactsArrayListtmp.Add(con);
-                }
-            }
 
-            return dataClass.usersContactsArrayListtmp;
-        }
-
-        public List<myContacts> SSTC(string userid, string grpid)
-        {
-            foreach (myContacts c in dataClass.usersContactsArrayList)
-            {
-                if (userid == c.Userid)
-                {
-                    myContacts con = new myContacts();
-                    con.Userid = c.Userid;
-                    con.GrpId = c.GrpId;
-                    con.conId = c.conId;
-                    con.ConName = c.ConName;
-                    con.ConDob = c.ConDob;
-                    con.ConMob = c.ConMob;
-                    con.ConEmail = c.ConEmail;
-                    con.ConAddr = c.ConAddr;
-                    dataClass.usersContactsArrayListtmp.Add(con);
-                }
-            }
-
-            return dataClass.usersContactsArrayListtmp;
-        }
-
-       
     }
 }

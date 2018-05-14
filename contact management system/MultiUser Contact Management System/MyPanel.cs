@@ -33,7 +33,7 @@ namespace MultiUser_Contact_Management_System
         private void btn_con_Click(object sender, EventArgs e)
         {
             MyContact con = new MyContact();
-
+    
             con.ShowDialog(); 
         }
 
@@ -44,14 +44,13 @@ namespace MultiUser_Contact_Management_System
 
         private void MyPanel_Load(object sender, EventArgs e)
         {
-        //        lblId.Text = MyUtill.loginUser.Userid.ToString();
-        //        lblUser.Text = MyUtill.loginUser.Username.ToString();
+   
         }
 
         private void btnSendSMS_Click(object sender, EventArgs e)
         {
-            //frmSendSMS fr = new frmSendSMS();
-            //fr.ShowDialog();
+            frmSendSMS fr = new frmSendSMS();
+            fr.ShowDialog();
         }
     }
 }

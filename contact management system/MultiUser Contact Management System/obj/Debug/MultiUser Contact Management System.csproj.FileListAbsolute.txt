@@ -237,3 +237,21 @@ C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contac
 C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
 C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
 C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+E:\Domain-Models\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe.config
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.ResolveComReference.cache
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.exe
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csprojResolveAssemblyReference.cache
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmain.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmChangePwd.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmlogin.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmRcvrPwd.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmSendSMS.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyGroups.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyPanel.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+E:\Domain-Models\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.exe
+E:\Domain-Models\contact management system\MultiUser Contact Management System\bin\Debug\MultiUser Contact Management System.pdb
+E:\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.pdb

@@ -18,6 +18,16 @@ namespace WcfContactsManagementSystem
             get { return _userid; }
             set { _userid = value; }
         }
+        private string _username;
+        [DataMember]
+        public string Username
+        {
+            get
+            { return _username;  }
+            set
+            { _username = value; }
+
+        }
 
         private string grpId;
         [DataMember]

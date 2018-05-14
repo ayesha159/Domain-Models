@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Runtime.Serialization;
+
 
 namespace WcfContactsManagementSystem
 {
+    [DataContract]
     public class myUser
     {
         private string _userid;
+        [DataMember]
         public string Userid
         {
             get { return _userid; }
             set { _userid = value; }
         }
 
-
         private string _username;
-
+        [DataMember]
         public string Username
         {
             get
@@ -29,6 +32,7 @@ namespace WcfContactsManagementSystem
             }
         }
         private string _password;
+        [DataMember]
         public string Userpwd
         {
             get { return _password; }
@@ -36,6 +40,7 @@ namespace WcfContactsManagementSystem
         }
 
         private string Email;
+        [DataMember]
         public string email
         {
             get
@@ -48,6 +53,7 @@ namespace WcfContactsManagementSystem
             }
         }
         private string MobileNo;
+        [DataMember]
         public string mobileno
         {
             get
@@ -58,7 +64,7 @@ namespace WcfContactsManagementSystem
             }
         }
         private bool _userIsAdmin;
-
+        [DataMember]
         public bool UserIsAdmin
         {
             get { return _userIsAdmin; }

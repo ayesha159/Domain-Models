@@ -25,7 +25,7 @@ C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagement
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
 C:\Users\ayesha jabbar\Desktop\New folder\Domain-Models123\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
-<<<<<<< HEAD
+HEAD
 C:\Users\ayesha jabbar\Desktop\Downloads\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\ayesha jabbar\Desktop\Downloads\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\ayesha jabbar\Desktop\Downloads\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
@@ -59,7 +59,6 @@ C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfCont
 C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfd.nlp
 C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkc.nlp
 C:\Users\Mahnoor Nawaz\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkd.nlp
->>>>>>> 56a6582681a85639c5e22b6f9d8600930c342531
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\mscorlib.dll
@@ -71,3 +70,28 @@ C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsMan
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
 C:\Users\LENOVO\Desktop\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\Ahmad\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll.config
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\mscorlib.dll
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normidna.nlp
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfc.nlp
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfd.nlp
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkc.nlp
+E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkd.nlp

@@ -79,12 +79,6 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetUser" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetUserResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetCon_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCon" />
   </wsdl:message>
@@ -96,12 +90,6 @@
   </wsdl:message>
   <wsdl:message name="IService1_ImportContacts_OutputMessage">
     <wsdl:part name="parameters" element="tns:ImportContactsResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_grpCreator_InputMessage">
-    <wsdl:part name="parameters" element="tns:grpCreator" />
-  </wsdl:message>
-  <wsdl:message name="IService1_grpCreator_OutputMessage">
-    <wsdl:part name="parameters" element="tns:grpCreatorResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_SSTG_InputMessage">
     <wsdl:part name="parameters" element="tns:SSTG" />
@@ -200,10 +188,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUser" message="tns:IService1_GetUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserResponse" message="tns:IService1_GetUser_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetCon">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCon" message="tns:IService1_GetCon_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetConResponse" message="tns:IService1_GetCon_OutputMessage" />
@@ -211,10 +195,6 @@
     <wsdl:operation name="ImportContacts">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ImportContacts" message="tns:IService1_ImportContacts_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ImportContactsResponse" message="tns:IService1_ImportContacts_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="grpCreator">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/grpCreator" message="tns:IService1_grpCreator_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/grpCreatorResponse" message="tns:IService1_grpCreator_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="SSTG">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/SSTG" message="tns:IService1_SSTG_InputMessage" />
@@ -359,15 +339,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetUser">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetUser" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetCon">
       <soap:operation soapAction="http://tempuri.org/IService1/GetCon" style="document" />
       <wsdl:input>
@@ -379,15 +350,6 @@
     </wsdl:operation>
     <wsdl:operation name="ImportContacts">
       <soap:operation soapAction="http://tempuri.org/IService1/ImportContacts" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="grpCreator">
-      <soap:operation soapAction="http://tempuri.org/IService1/grpCreator" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
