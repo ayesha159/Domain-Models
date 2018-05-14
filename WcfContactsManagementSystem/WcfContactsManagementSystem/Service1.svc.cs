@@ -311,8 +311,129 @@ namespace WcfContactsManagementSystem
             //dataClass.usersGroupsArrayList.RemoveRange(0, tc);
             return true;
         }
+        public string ImportContacts(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId)
+        {
+            int _id = 0;
+            string _name = "";
 
-        
+            foreach (myContacts myCon in dataClass.usersContactsArrayList)
+            {
+                _id = Convert.ToInt16(myCon.conId.ToString());
+                _name = myCon.ConName.ToString();
+            }
+            if (_id == 0) _id = 1;
+            else _id++;
+
+            myContacts con = new myContacts();
+            con.Userid = userId;
+            con.GrpId = grpId;
+            con.conId = _id.ToString();
+            con.ConName = name;
+            con.ConDob = DOB;
+            con.ConMob = moblieNo;
+            con.ConEmail = email;
+            con.ConAddr = address;
+            dataClass.usersContactsArrayList.Add(con);
+            return "";
+
+        }
+
+
+        public List<myContacts> SearchCbyName(string userId, string grpId, string name)
+        {
+            dataClass.SearchList.Clear();
+            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            {
+                string usid = mc.Userid.ToString();
+                string gpid = mc.GrpId.ToString().Trim();
+                if (userId == usid)
+                {
+                    if (grpId == gpid)
+                    {
+                        if (mc.ConName.Trim().ToLower() == name.Trim())
+                        {
+                            string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
+                            dataClass.SearchList.Add(mc);
+
+                        }
+                    }
+                }
+
+            }
+            return dataClass.SearchList;
+        }
+
+
+        public List<myContacts> SearchCbyDob(string userId, string grpId, string dob)
+        {
+            dataClass.SearchList.Clear();
+            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            {
+                string usid = mc.Userid.ToString();
+                string gpid = mc.GrpId.ToString().Trim();
+                if (userId == usid)
+                {
+                    if (grpId == gpid)
+                    {
+                        if (mc.ConDob.Trim().ToLower() == dob.Trim())
+                        {
+                            string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
+                            dataClass.SearchList.Add(mc);
+
+                        }
+                    }
+                }
+
+            }
+            return dataClass.SearchList;
+        }
+
+        public List<myContacts> SearchCbyEmail(string userId, string grpId, string email)
+        {
+            dataClass.SearchList.Clear();
+            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            {
+                string usid = mc.Userid.ToString();
+                string gpid = mc.GrpId.ToString().Trim();
+                if (userId == usid)
+                {
+                    if (grpId == gpid)
+                    {
+                        if (mc.ConEmail.Trim().ToLower() == email.Trim())
+                        {
+                            string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
+                            dataClass.SearchList.Add(mc);
+
+                        }
+                    }
+                }
+
+            }
+            return dataClass.SearchList;
+        }
+        public List<myContacts> SearchCbyMob(string userId, string grpId, string mob)
+        {
+            dataClass.SearchList.Clear();
+            foreach (myContacts mc in dataClass.usersContactsArrayList)
+            {
+                string usid = mc.Userid.ToString();
+                string gpid = mc.GrpId.ToString().Trim();
+                if (userId == usid)
+                {
+                    if (grpId == gpid)
+                    {
+                        if (mc.ConMob.Trim().ToLower() == mob.Trim())
+                        {
+                            string[] row0 = { mc.Userid, mc.GrpId, mc.conId, mc.ConName, mc.ConMob, mc.ConEmail, mc.ConDob, mc.ConAddr };
+                            dataClass.SearchList.Add(mc);
+
+                        }
+                    }
+                }
+
+            }
+            return dataClass.SearchList;
+        }
 
     }
 }

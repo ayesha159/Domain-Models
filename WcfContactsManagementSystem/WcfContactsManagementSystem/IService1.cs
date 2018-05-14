@@ -55,6 +55,25 @@ namespace WcfContactsManagementSystem
         List<myGroup> GetData();
 
         [OperationContract]
+        string ImportContacts(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId);
+        
+
+        [OperationContract]
+        List<myContacts> SearchCbyName(string userId, string grpId, string name);
+
+
+        [OperationContract]
+        List<myContacts> SearchCbyDob(string userId, string grpId, string dob);
+
+
+        [OperationContract]
+        List<myContacts> SearchCbyEmail(string userId, string grpId, string email);
+       
+        [OperationContract]
+        List<myContacts> SearchCbyMob(string userId, string grpId, string mob);
+
+
+        [OperationContract]
         List<myContacts> GetCon();
         //[OperationContract]
         //string GetData(int value);
