@@ -43,6 +43,24 @@
   <wsdl:message name="IService1_AddGroup_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddGroupResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_AddContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContact" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContact" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateContactsResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_DeleteGroup_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteGroup" />
   </wsdl:message>
@@ -60,6 +78,78 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCon" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImportContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImportContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_grpCreator_InputMessage">
+    <wsdl:part name="parameters" element="tns:grpCreator" />
+  </wsdl:message>
+  <wsdl:message name="IService1_grpCreator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:grpCreatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSTG_InputMessage">
+    <wsdl:part name="parameters" element="tns:SSTG" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSTG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SSTGResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyName_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyName" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyDob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyDob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyDob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyDobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowContactsSMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowContactsSMS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowContactsSMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowContactsSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyMob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyMob" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchCbyMob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCbyMobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SSTC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SSTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SSTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllContacts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllContacts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ShowAllContacts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAllContactsResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="IsValidUser">
@@ -86,6 +176,18 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddGroup" message="tns:IService1_AddGroup_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddGroupResponse" message="tns:IService1_AddGroup_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddContact" message="tns:IService1_AddContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddContactResponse" message="tns:IService1_AddContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteContact" message="tns:IService1_DeleteContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteContactResponse" message="tns:IService1_DeleteContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateContacts" message="tns:IService1_UpdateContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateContactsResponse" message="tns:IService1_UpdateContacts_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="DeleteGroup">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteGroup" message="tns:IService1_DeleteGroup_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteGroupResponse" message="tns:IService1_DeleteGroup_OutputMessage" />
@@ -97,6 +199,54 @@
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUser" message="tns:IService1_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserResponse" message="tns:IService1_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCon" message="tns:IService1_GetCon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetConResponse" message="tns:IService1_GetCon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ImportContacts" message="tns:IService1_ImportContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ImportContactsResponse" message="tns:IService1_ImportContacts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="grpCreator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/grpCreator" message="tns:IService1_grpCreator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/grpCreatorResponse" message="tns:IService1_grpCreator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SSTG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SSTG" message="tns:IService1_SSTG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SSTGResponse" message="tns:IService1_SSTG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchCbyName" message="tns:IService1_SearchCbyName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchCbyNameResponse" message="tns:IService1_SearchCbyName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyDob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchCbyDob" message="tns:IService1_SearchCbyDob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchCbyDobResponse" message="tns:IService1_SearchCbyDob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchCbyEmail" message="tns:IService1_SearchCbyEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchCbyEmailResponse" message="tns:IService1_SearchCbyEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowContactsSMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowContactsSMS" message="tns:IService1_ShowContactsSMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowContactsSMSResponse" message="tns:IService1_ShowContactsSMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyMob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchCbyMob" message="tns:IService1_SearchCbyMob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchCbyMobResponse" message="tns:IService1_SearchCbyMob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SSTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SSTC" message="tns:IService1_SSTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SSTCResponse" message="tns:IService1_SSTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllContacts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ShowAllContacts" message="tns:IService1_ShowAllContacts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ShowAllContactsResponse" message="tns:IService1_ShowAllContacts_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -155,6 +305,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="AddContact">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContact">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="DeleteGroup">
       <soap:operation soapAction="http://tempuri.org/IService1/DeleteGroup" style="document" />
       <wsdl:input>
@@ -175,6 +352,114 @@
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCon">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/ImportContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="grpCreator">
+      <soap:operation soapAction="http://tempuri.org/IService1/grpCreator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSTG">
+      <soap:operation soapAction="http://tempuri.org/IService1/SSTG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyName">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchCbyName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyDob">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchCbyDob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyEmail">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchCbyEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowContactsSMS">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowContactsSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCbyMob">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchCbyMob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SSTC">
+      <soap:operation soapAction="http://tempuri.org/IService1/SSTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAllContacts">
+      <soap:operation soapAction="http://tempuri.org/IService1/ShowAllContacts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -234,3 +234,4 @@ C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contac
 C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.Properties.Resources.resources
 C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.frmregister.resources
 C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser Contact Management System.csproj.GenerateResource.Cache
+C:\Users\LENOVO\Desktop\Domain-Models\contact management system\MultiUser Contact Management System\obj\Debug\MultiUser_Contact_Management_System.MyContact.resources

@@ -74,8 +74,6 @@ namespace WcfContactsManagementSystem
             return "invalid user or User no Registered with this Mobile No.";
         }
 
-
-
         public bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe)
         {
             if (txtOld.Trim().Length == 0)
@@ -225,8 +223,7 @@ namespace WcfContactsManagementSystem
 
         }
 
-
-        public bool AddContact(string name, string DOB, string moblieNo, string email, string address)
+        public bool AddContact(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address)
         {
             int _id = 0;
             string _name = "";
@@ -240,7 +237,8 @@ namespace WcfContactsManagementSystem
             else _id++;
 
             myContacts con = new myContacts();
-            con.Userid = myUtill.loginUser.Userid;
+            con.Userid = userId;
+            con.GrpId = grpId;
             con.conId = _id.ToString();
             con.ConName = name;
             con.ConDob = DOB;
@@ -270,7 +268,6 @@ namespace WcfContactsManagementSystem
         }
         public bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address)
         {
-            int tc = 0;
             // algo1
             foreach (myContacts con in dataClass.usersContactsArrayList)
             {
@@ -299,7 +296,7 @@ namespace WcfContactsManagementSystem
             }
 
             dataClass.usersContactsArrayList.Clear();
-            foreach(myContacts c in dataClass.usersContactsArrayListtmp)
+            foreach (myContacts c in dataClass.usersContactsArrayListtmp)
             {
                 myContacts co = new myContacts();
                 co.conId = c.conId;
@@ -315,6 +312,7 @@ namespace WcfContactsManagementSystem
             return true;
         }
 
+        
 
     }
 }

@@ -71,6 +71,12 @@
     <Compile Include="frmRcvrPwd.Designer.cs">
       <DependentUpon>frmRcvrPwd.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyContact.designer.cs">
+      <DependentUpon>MyContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyGroup.cs" />
     <Compile Include="MyGroups.cs">
       <SubType>Form</SubType>
@@ -112,6 +118,9 @@
     <EmbeddedResource Include="frmRcvrPwd.resx">
       <DependentUpon>frmRcvrPwd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyContact.resx">
+      <DependentUpon>MyContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyGroups.resx">
       <DependentUpon>MyGroups.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,7 +148,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\Contacts\myContacts.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Contacts\myGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Contacts\myUser.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Contacts\Reference.map">

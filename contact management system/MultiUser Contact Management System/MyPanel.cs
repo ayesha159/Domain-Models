@@ -32,9 +32,9 @@ namespace MultiUser_Contact_Management_System
 
         private void btn_con_Click(object sender, EventArgs e)
         {
-        //    MyContact con = new MyContact();
+            MyContact con = new MyContact();
 
-        //    con.ShowDialog(); 
+            con.ShowDialog(); 
         }
 
         private void btn_logout_Click(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace MultiUser_Contact_Management_System.Contacts {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -41,11 +41,41 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         private System.Threading.SendOrPostCallback AddGroupOperationCompleted;
         
+        private System.Threading.SendOrPostCallback AddContactOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback DeleteContactOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback UpdateContactsOperationCompleted;
+        
         private System.Threading.SendOrPostCallback DeleteGroupOperationCompleted;
         
         private System.Threading.SendOrPostCallback UpdateGroupOperationCompleted;
         
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetUserOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback GetConOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ImportContactsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback grpCreatorOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SSTGOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchCbyNameOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchCbyDobOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchCbyEmailOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowContactsSMSOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SearchCbyMobOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback SSTCOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ShowAllContactsOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -104,6 +134,15 @@ namespace MultiUser_Contact_Management_System.Contacts {
         public event AddGroupCompletedEventHandler AddGroupCompleted;
         
         /// <remarks/>
+        public event AddContactCompletedEventHandler AddContactCompleted;
+        
+        /// <remarks/>
+        public event DeleteContactCompletedEventHandler DeleteContactCompleted;
+        
+        /// <remarks/>
+        public event UpdateContactsCompletedEventHandler UpdateContactsCompleted;
+        
+        /// <remarks/>
         public event DeleteGroupCompletedEventHandler DeleteGroupCompleted;
         
         /// <remarks/>
@@ -111,6 +150,42 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         public event GetDataCompletedEventHandler GetDataCompleted;
+        
+        /// <remarks/>
+        public event GetUserCompletedEventHandler GetUserCompleted;
+        
+        /// <remarks/>
+        public event GetConCompletedEventHandler GetConCompleted;
+        
+        /// <remarks/>
+        public event ImportContactsCompletedEventHandler ImportContactsCompleted;
+        
+        /// <remarks/>
+        public event grpCreatorCompletedEventHandler grpCreatorCompleted;
+        
+        /// <remarks/>
+        public event SSTGCompletedEventHandler SSTGCompleted;
+        
+        /// <remarks/>
+        public event SearchCbyNameCompletedEventHandler SearchCbyNameCompleted;
+        
+        /// <remarks/>
+        public event SearchCbyDobCompletedEventHandler SearchCbyDobCompleted;
+        
+        /// <remarks/>
+        public event SearchCbyEmailCompletedEventHandler SearchCbyEmailCompleted;
+        
+        /// <remarks/>
+        public event ShowContactsSMSCompletedEventHandler ShowContactsSMSCompleted;
+        
+        /// <remarks/>
+        public event SearchCbyMobCompletedEventHandler SearchCbyMobCompleted;
+        
+        /// <remarks/>
+        public event SSTCCompletedEventHandler SSTCCompleted;
+        
+        /// <remarks/>
+        public event ShowAllContactsCompletedEventHandler ShowAllContactsCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/IsValidUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -279,34 +354,148 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string GrpName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string userId, out bool AddGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddGroupResultSpecified) {
+        public void AddGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string GrpName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, out bool AddGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddGroupResultSpecified) {
             object[] results = this.Invoke("AddGroup", new object[] {
                         GrpName,
-                        userId});
+                        userId,
+                        userName});
             userId = ((string)(results[0]));
             AddGroupResult = ((bool)(results[1]));
             AddGroupResultSpecified = ((bool)(results[2]));
         }
         
         /// <remarks/>
-        public void AddGroupAsync(string GrpName, string userId) {
-            this.AddGroupAsync(GrpName, userId, null);
+        public void AddGroupAsync(string GrpName, string userId, string userName) {
+            this.AddGroupAsync(GrpName, userId, userName, null);
         }
         
         /// <remarks/>
-        public void AddGroupAsync(string GrpName, string userId, object userState) {
+        public void AddGroupAsync(string GrpName, string userId, string userName, object userState) {
             if ((this.AddGroupOperationCompleted == null)) {
                 this.AddGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddGroupOperationCompleted);
             }
             this.InvokeAsync("AddGroup", new object[] {
                         GrpName,
-                        userId}, this.AddGroupOperationCompleted, userState);
+                        userId,
+                        userName}, this.AddGroupOperationCompleted, userState);
         }
         
         private void OnAddGroupOperationCompleted(object arg) {
             if ((this.AddGroupCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.AddGroupCompleted(this, new AddGroupCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddContact", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void AddContact([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string DOB, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string moblieNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string email, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string address, out bool AddContactResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddContactResultSpecified) {
+            object[] results = this.Invoke("AddContact", new object[] {
+                        userId,
+                        grpId,
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address});
+            AddContactResult = ((bool)(results[0]));
+            AddContactResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void AddContactAsync(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address) {
+            this.AddContactAsync(userId, grpId, name, DOB, moblieNo, email, address, null);
+        }
+        
+        /// <remarks/>
+        public void AddContactAsync(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address, object userState) {
+            if ((this.AddContactOperationCompleted == null)) {
+                this.AddContactOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddContactOperationCompleted);
+            }
+            this.InvokeAsync("AddContact", new object[] {
+                        userId,
+                        grpId,
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address}, this.AddContactOperationCompleted, userState);
+        }
+        
+        private void OnAddContactOperationCompleted(object arg) {
+            if ((this.AddContactCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AddContactCompleted(this, new AddContactCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/DeleteContact", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void DeleteContact([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string idcon, out bool DeleteContactResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool DeleteContactResultSpecified) {
+            object[] results = this.Invoke("DeleteContact", new object[] {
+                        idcon});
+            DeleteContactResult = ((bool)(results[0]));
+            DeleteContactResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void DeleteContactAsync(string idcon) {
+            this.DeleteContactAsync(idcon, null);
+        }
+        
+        /// <remarks/>
+        public void DeleteContactAsync(string idcon, object userState) {
+            if ((this.DeleteContactOperationCompleted == null)) {
+                this.DeleteContactOperationCompleted = new System.Threading.SendOrPostCallback(this.OnDeleteContactOperationCompleted);
+            }
+            this.InvokeAsync("DeleteContact", new object[] {
+                        idcon}, this.DeleteContactOperationCompleted, userState);
+        }
+        
+        private void OnDeleteContactOperationCompleted(object arg) {
+            if ((this.DeleteContactCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.DeleteContactCompleted(this, new DeleteContactCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/UpdateContacts", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void UpdateContacts([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string conid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string DOB, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string moblieNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string email, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string address, out bool UpdateContactsResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateContactsResultSpecified) {
+            object[] results = this.Invoke("UpdateContacts", new object[] {
+                        conid,
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address});
+            UpdateContactsResult = ((bool)(results[0]));
+            UpdateContactsResultSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void UpdateContactsAsync(string conid, string name, string DOB, string moblieNo, string email, string address) {
+            this.UpdateContactsAsync(conid, name, DOB, moblieNo, email, address, null);
+        }
+        
+        /// <remarks/>
+        public void UpdateContactsAsync(string conid, string name, string DOB, string moblieNo, string email, string address, object userState) {
+            if ((this.UpdateContactsOperationCompleted == null)) {
+                this.UpdateContactsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateContactsOperationCompleted);
+            }
+            this.InvokeAsync("UpdateContacts", new object[] {
+                        conid,
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address}, this.UpdateContactsOperationCompleted, userState);
+        }
+        
+        private void OnUpdateContactsOperationCompleted(object arg) {
+            if ((this.UpdateContactsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.UpdateContactsCompleted(this, new UpdateContactsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -342,27 +531,29 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/UpdateGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void UpdateGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpname, out bool UpdateGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateGroupResultSpecified) {
+        public void UpdateGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, out bool UpdateGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateGroupResultSpecified) {
             object[] results = this.Invoke("UpdateGroup", new object[] {
                         grpid,
-                        grpname});
+                        grpname,
+                        username});
             UpdateGroupResult = ((bool)(results[0]));
             UpdateGroupResultSpecified = ((bool)(results[1]));
         }
         
         /// <remarks/>
-        public void UpdateGroupAsync(string grpid, string grpname) {
-            this.UpdateGroupAsync(grpid, grpname, null);
+        public void UpdateGroupAsync(string grpid, string grpname, string username) {
+            this.UpdateGroupAsync(grpid, grpname, username, null);
         }
         
         /// <remarks/>
-        public void UpdateGroupAsync(string grpid, string grpname, object userState) {
+        public void UpdateGroupAsync(string grpid, string grpname, string username, object userState) {
             if ((this.UpdateGroupOperationCompleted == null)) {
                 this.UpdateGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateGroupOperationCompleted);
             }
             this.InvokeAsync("UpdateGroup", new object[] {
                         grpid,
-                        grpname}, this.UpdateGroupOperationCompleted, userState);
+                        grpname,
+                        username}, this.UpdateGroupOperationCompleted, userState);
         }
         
         private void OnUpdateGroupOperationCompleted(object arg) {
@@ -402,6 +593,408 @@ namespace MultiUser_Contact_Management_System.Contacts {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myUser[] GetUser() {
+            object[] results = this.Invoke("GetUser", new object[0]);
+            return ((myUser[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetUserAsync() {
+            this.GetUserAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetUserAsync(object userState) {
+            if ((this.GetUserOperationCompleted == null)) {
+                this.GetUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUserOperationCompleted);
+            }
+            this.InvokeAsync("GetUser", new object[0], this.GetUserOperationCompleted, userState);
+        }
+        
+        private void OnGetUserOperationCompleted(object arg) {
+            if ((this.GetUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetUserCompleted(this, new GetUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetCon", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] GetCon() {
+            object[] results = this.Invoke("GetCon", new object[0]);
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetConAsync() {
+            this.GetConAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetConAsync(object userState) {
+            if ((this.GetConOperationCompleted == null)) {
+                this.GetConOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetConOperationCompleted);
+            }
+            this.InvokeAsync("GetCon", new object[0], this.GetConOperationCompleted, userState);
+        }
+        
+        private void OnGetConOperationCompleted(object arg) {
+            if ((this.GetConCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetConCompleted(this, new GetConCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ImportContacts", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ImportContacts([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string DOB, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string moblieNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string email, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string address, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId) {
+            object[] results = this.Invoke("ImportContacts", new object[] {
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address,
+                        userId,
+                        grpId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ImportContactsAsync(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId) {
+            this.ImportContactsAsync(name, DOB, moblieNo, email, address, userId, grpId, null);
+        }
+        
+        /// <remarks/>
+        public void ImportContactsAsync(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId, object userState) {
+            if ((this.ImportContactsOperationCompleted == null)) {
+                this.ImportContactsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnImportContactsOperationCompleted);
+            }
+            this.InvokeAsync("ImportContacts", new object[] {
+                        name,
+                        DOB,
+                        moblieNo,
+                        email,
+                        address,
+                        userId,
+                        grpId}, this.ImportContactsOperationCompleted, userState);
+        }
+        
+        private void OnImportContactsOperationCompleted(object arg) {
+            if ((this.ImportContactsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ImportContactsCompleted(this, new ImportContactsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/grpCreator", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string grpCreator([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId) {
+            object[] results = this.Invoke("grpCreator", new object[] {
+                        userId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void grpCreatorAsync(string userId) {
+            this.grpCreatorAsync(userId, null);
+        }
+        
+        /// <remarks/>
+        public void grpCreatorAsync(string userId, object userState) {
+            if ((this.grpCreatorOperationCompleted == null)) {
+                this.grpCreatorOperationCompleted = new System.Threading.SendOrPostCallback(this.OngrpCreatorOperationCompleted);
+            }
+            this.InvokeAsync("grpCreator", new object[] {
+                        userId}, this.grpCreatorOperationCompleted, userState);
+        }
+        
+        private void OngrpCreatorOperationCompleted(object arg) {
+            if ((this.grpCreatorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.grpCreatorCompleted(this, new grpCreatorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SSTG", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SSTG([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid) {
+            object[] results = this.Invoke("SSTG", new object[] {
+                        userid,
+                        grpid});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SSTGAsync(string userid, string grpid) {
+            this.SSTGAsync(userid, grpid, null);
+        }
+        
+        /// <remarks/>
+        public void SSTGAsync(string userid, string grpid, object userState) {
+            if ((this.SSTGOperationCompleted == null)) {
+                this.SSTGOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSSTGOperationCompleted);
+            }
+            this.InvokeAsync("SSTG", new object[] {
+                        userid,
+                        grpid}, this.SSTGOperationCompleted, userState);
+        }
+        
+        private void OnSSTGOperationCompleted(object arg) {
+            if ((this.SSTGCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SSTGCompleted(this, new SSTGCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchCbyName", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SearchCbyName([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string name) {
+            object[] results = this.Invoke("SearchCbyName", new object[] {
+                        userId,
+                        grpId,
+                        name});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchCbyNameAsync(string userId, string grpId, string name) {
+            this.SearchCbyNameAsync(userId, grpId, name, null);
+        }
+        
+        /// <remarks/>
+        public void SearchCbyNameAsync(string userId, string grpId, string name, object userState) {
+            if ((this.SearchCbyNameOperationCompleted == null)) {
+                this.SearchCbyNameOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchCbyNameOperationCompleted);
+            }
+            this.InvokeAsync("SearchCbyName", new object[] {
+                        userId,
+                        grpId,
+                        name}, this.SearchCbyNameOperationCompleted, userState);
+        }
+        
+        private void OnSearchCbyNameOperationCompleted(object arg) {
+            if ((this.SearchCbyNameCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchCbyNameCompleted(this, new SearchCbyNameCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchCbyDob", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SearchCbyDob([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string dob) {
+            object[] results = this.Invoke("SearchCbyDob", new object[] {
+                        userId,
+                        grpId,
+                        dob});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchCbyDobAsync(string userId, string grpId, string dob) {
+            this.SearchCbyDobAsync(userId, grpId, dob, null);
+        }
+        
+        /// <remarks/>
+        public void SearchCbyDobAsync(string userId, string grpId, string dob, object userState) {
+            if ((this.SearchCbyDobOperationCompleted == null)) {
+                this.SearchCbyDobOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchCbyDobOperationCompleted);
+            }
+            this.InvokeAsync("SearchCbyDob", new object[] {
+                        userId,
+                        grpId,
+                        dob}, this.SearchCbyDobOperationCompleted, userState);
+        }
+        
+        private void OnSearchCbyDobOperationCompleted(object arg) {
+            if ((this.SearchCbyDobCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchCbyDobCompleted(this, new SearchCbyDobCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchCbyEmail", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SearchCbyEmail([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string email) {
+            object[] results = this.Invoke("SearchCbyEmail", new object[] {
+                        userId,
+                        grpId,
+                        email});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchCbyEmailAsync(string userId, string grpId, string email) {
+            this.SearchCbyEmailAsync(userId, grpId, email, null);
+        }
+        
+        /// <remarks/>
+        public void SearchCbyEmailAsync(string userId, string grpId, string email, object userState) {
+            if ((this.SearchCbyEmailOperationCompleted == null)) {
+                this.SearchCbyEmailOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchCbyEmailOperationCompleted);
+            }
+            this.InvokeAsync("SearchCbyEmail", new object[] {
+                        userId,
+                        grpId,
+                        email}, this.SearchCbyEmailOperationCompleted, userState);
+        }
+        
+        private void OnSearchCbyEmailOperationCompleted(object arg) {
+            if ((this.SearchCbyEmailCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchCbyEmailCompleted(this, new SearchCbyEmailCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowContactsSMS", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] ShowContactsSMS([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId) {
+            object[] results = this.Invoke("ShowContactsSMS", new object[] {
+                        userId,
+                        grpId});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowContactsSMSAsync(string userId, string grpId) {
+            this.ShowContactsSMSAsync(userId, grpId, null);
+        }
+        
+        /// <remarks/>
+        public void ShowContactsSMSAsync(string userId, string grpId, object userState) {
+            if ((this.ShowContactsSMSOperationCompleted == null)) {
+                this.ShowContactsSMSOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowContactsSMSOperationCompleted);
+            }
+            this.InvokeAsync("ShowContactsSMS", new object[] {
+                        userId,
+                        grpId}, this.ShowContactsSMSOperationCompleted, userState);
+        }
+        
+        private void OnShowContactsSMSOperationCompleted(object arg) {
+            if ((this.ShowContactsSMSCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowContactsSMSCompleted(this, new ShowContactsSMSCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SearchCbyMob", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SearchCbyMob([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string mob) {
+            object[] results = this.Invoke("SearchCbyMob", new object[] {
+                        userId,
+                        grpId,
+                        mob});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SearchCbyMobAsync(string userId, string grpId, string mob) {
+            this.SearchCbyMobAsync(userId, grpId, mob, null);
+        }
+        
+        /// <remarks/>
+        public void SearchCbyMobAsync(string userId, string grpId, string mob, object userState) {
+            if ((this.SearchCbyMobOperationCompleted == null)) {
+                this.SearchCbyMobOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSearchCbyMobOperationCompleted);
+            }
+            this.InvokeAsync("SearchCbyMob", new object[] {
+                        userId,
+                        grpId,
+                        mob}, this.SearchCbyMobOperationCompleted, userState);
+        }
+        
+        private void OnSearchCbyMobOperationCompleted(object arg) {
+            if ((this.SearchCbyMobCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SearchCbyMobCompleted(this, new SearchCbyMobCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/SSTC", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] SSTC([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid) {
+            object[] results = this.Invoke("SSTC", new object[] {
+                        userid,
+                        grpid});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void SSTCAsync(string userid, string grpid) {
+            this.SSTCAsync(userid, grpid, null);
+        }
+        
+        /// <remarks/>
+        public void SSTCAsync(string userid, string grpid, object userState) {
+            if ((this.SSTCOperationCompleted == null)) {
+                this.SSTCOperationCompleted = new System.Threading.SendOrPostCallback(this.OnSSTCOperationCompleted);
+            }
+            this.InvokeAsync("SSTC", new object[] {
+                        userid,
+                        grpid}, this.SSTCOperationCompleted, userState);
+        }
+        
+        private void OnSSTCOperationCompleted(object arg) {
+            if ((this.SSTCCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.SSTCCompleted(this, new SSTCCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/ShowAllContacts", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myContacts[] ShowAllContacts([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpId) {
+            object[] results = this.Invoke("ShowAllContacts", new object[] {
+                        userId,
+                        grpId});
+            return ((myContacts[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ShowAllContactsAsync(string userId, string grpId) {
+            this.ShowAllContactsAsync(userId, grpId, null);
+        }
+        
+        /// <remarks/>
+        public void ShowAllContactsAsync(string userId, string grpId, object userState) {
+            if ((this.ShowAllContactsOperationCompleted == null)) {
+                this.ShowAllContactsOperationCompleted = new System.Threading.SendOrPostCallback(this.OnShowAllContactsOperationCompleted);
+            }
+            this.InvokeAsync("ShowAllContacts", new object[] {
+                        userId,
+                        grpId}, this.ShowAllContactsOperationCompleted, userState);
+        }
+        
+        private void OnShowAllContactsOperationCompleted(object arg) {
+            if ((this.ShowAllContactsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ShowAllContactsCompleted(this, new ShowAllContactsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -421,7 +1014,7 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1064.2")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -433,6 +1026,8 @@ namespace MultiUser_Contact_Management_System.Contacts {
         private string grpNameField;
         
         private string useridField;
+        
+        private string usernameField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -466,14 +1061,237 @@ namespace MultiUser_Contact_Management_System.Contacts {
                 this.useridField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+    public partial class myContacts {
+        
+        private string conAddrField;
+        
+        private string conDobField;
+        
+        private string conEmailField;
+        
+        private string conMobField;
+        
+        private string conNameField;
+        
+        private string grpIdField;
+        
+        private string useridField;
+        
+        private string conIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ConAddr {
+            get {
+                return this.conAddrField;
+            }
+            set {
+                this.conAddrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ConDob {
+            get {
+                return this.conDobField;
+            }
+            set {
+                this.conDobField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ConEmail {
+            get {
+                return this.conEmailField;
+            }
+            set {
+                this.conEmailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ConMob {
+            get {
+                return this.conMobField;
+            }
+            set {
+                this.conMobField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string ConName {
+            get {
+                return this.conNameField;
+            }
+            set {
+                this.conNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string GrpId {
+            get {
+                return this.grpIdField;
+            }
+            set {
+                this.grpIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Userid {
+            get {
+                return this.useridField;
+            }
+            set {
+                this.useridField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string conId {
+            get {
+                return this.conIdField;
+            }
+            set {
+                this.conIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+    public partial class myUser {
+        
+        private bool userIsAdminField;
+        
+        private bool userIsAdminFieldSpecified;
+        
+        private string useridField;
+        
+        private string usernameField;
+        
+        private string userpwdField;
+        
+        private string emailField;
+        
+        private string mobilenoField;
+        
+        /// <remarks/>
+        public bool UserIsAdmin {
+            get {
+                return this.userIsAdminField;
+            }
+            set {
+                this.userIsAdminField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UserIsAdminSpecified {
+            get {
+                return this.userIsAdminFieldSpecified;
+            }
+            set {
+                this.userIsAdminFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Userid {
+            get {
+                return this.useridField;
+            }
+            set {
+                this.useridField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Userpwd {
+            get {
+                return this.userpwdField;
+            }
+            set {
+                this.userpwdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mobileno {
+            get {
+                return this.mobilenoField;
+            }
+            set {
+                this.mobilenoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void IsValidUserCompletedEventHandler(object sender, IsValidUserCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class IsValidUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -511,15 +1329,15 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void IsUserRegisterCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void RecoverPwdECompletedEventHandler(object sender, RecoverPwdECompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RecoverPwdECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -541,11 +1359,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void RecoverPwdSCompletedEventHandler(object sender, RecoverPwdSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RecoverPwdSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -567,11 +1385,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ChangePwdCompletedEventHandler(object sender, ChangePwdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ChangePwdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -601,11 +1419,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void AddGroupCompletedEventHandler(object sender, AddGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -643,11 +1461,113 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void AddContactCompletedEventHandler(object sender, AddContactCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AddContactCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AddContactCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool AddContactResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool AddContactResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void DeleteContactCompletedEventHandler(object sender, DeleteContactCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class DeleteContactCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal DeleteContactCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool DeleteContactResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool DeleteContactResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void UpdateContactsCompletedEventHandler(object sender, UpdateContactsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class UpdateContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal UpdateContactsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool UpdateContactsResult {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool UpdateContactsResultSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void DeleteGroupCompletedEventHandler(object sender, DeleteGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -677,11 +1597,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void UpdateGroupCompletedEventHandler(object sender, UpdateGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -711,11 +1631,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -732,6 +1652,318 @@ namespace MultiUser_Contact_Management_System.Contacts {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((myGroup[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void GetUserCompletedEventHandler(object sender, GetUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myUser[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myUser[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void GetConCompletedEventHandler(object sender, GetConCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetConCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetConCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void ImportContactsCompletedEventHandler(object sender, ImportContactsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ImportContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ImportContactsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void grpCreatorCompletedEventHandler(object sender, grpCreatorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class grpCreatorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal grpCreatorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SSTGCompletedEventHandler(object sender, SSTGCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SSTGCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SSTGCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SearchCbyNameCompletedEventHandler(object sender, SearchCbyNameCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchCbyNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchCbyNameCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SearchCbyDobCompletedEventHandler(object sender, SearchCbyDobCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchCbyDobCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchCbyDobCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SearchCbyEmailCompletedEventHandler(object sender, SearchCbyEmailCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchCbyEmailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchCbyEmailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void ShowContactsSMSCompletedEventHandler(object sender, ShowContactsSMSCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowContactsSMSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowContactsSMSCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SearchCbyMobCompletedEventHandler(object sender, SearchCbyMobCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SearchCbyMobCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SearchCbyMobCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void SSTCCompletedEventHandler(object sender, SSTCCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class SSTCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal SSTCCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void ShowAllContactsCompletedEventHandler(object sender, ShowAllContactsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ShowAllContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ShowAllContactsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myContacts[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myContacts[])(this.results[0]));
             }
         }
     }

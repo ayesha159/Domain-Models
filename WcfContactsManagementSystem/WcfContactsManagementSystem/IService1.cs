@@ -32,13 +32,13 @@ namespace WcfContactsManagementSystem
 
         bool AddGroup(string GrpName , ref string userId);
         [OperationContract]
-        bool AddContact(string name,string DOB,string moblieNo, string email,string address);
+        bool AddContact(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address);
         [OperationContract]
 
         bool DeleteContact(string idcon);
         [OperationContract]
-        bool UpdateContacts();
-
+        bool UpdateContacts(string conid, string name, string DOB, string moblieNo, string email, string address);
+      
 
 
         //[OperationContract]
