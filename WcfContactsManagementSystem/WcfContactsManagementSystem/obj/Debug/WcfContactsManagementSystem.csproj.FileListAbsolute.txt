@@ -84,14 +84,3 @@ C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManage
 C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
 C:\Users\Lenovo\Desktop\Domain-Models-9-May-2018\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.csprojResolveAssemblyReference.cache
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.dll
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\obj\Debug\WcfContactsManagementSystem.pdb
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.dll
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\WcfContactsManagementSystem.pdb
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\mscorlib.dll
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normidna.nlp
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfc.nlp
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfd.nlp
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkc.nlp
-E:\Domain-Models\WcfContactsManagementSystem\WcfContactsManagementSystem\bin\normnfkd.nlp

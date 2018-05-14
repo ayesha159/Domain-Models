@@ -32,6 +32,7 @@ namespace MultiUser_Contact_Management_System
         public bool RecoverPwdbySMS(string cellNo, string sms)
         {
             string messages = null;
+
             messages = sms;
             if (this.MyserialPort.IsOpen == true)
             {

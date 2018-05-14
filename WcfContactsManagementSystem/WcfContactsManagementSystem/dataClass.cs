@@ -10,7 +10,7 @@ namespace WcfContactsManagementSystem
     {
         public static List<myUser> usersList = new List<myUser>();
         public static List<myGroup> usersGroupsArrayList = new List<myGroup>();
-        public static ArrayList usersGroupsArrayListtmp = new ArrayList();
+        public static List<myGroup> usersGroupsArrayListtmp = new List<myGroup>();
         public static List<myContacts> usersContactsArrayList = new List<myContacts>();
         public static List<myContacts> usersContactsArrayListtmp = new List<myContacts>();
         public static ArrayList smsArrayList = new ArrayList();

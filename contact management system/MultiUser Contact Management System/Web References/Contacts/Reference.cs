@@ -23,7 +23,7 @@ namespace MultiUser_Contact_Management_System.Contacts {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -53,9 +53,13 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
+        private System.Threading.SendOrPostCallback GetUserOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetConOperationCompleted;
         
         private System.Threading.SendOrPostCallback ImportContactsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback grpCreatorOperationCompleted;
         
         private System.Threading.SendOrPostCallback SSTGOperationCompleted;
         
@@ -148,10 +152,16 @@ namespace MultiUser_Contact_Management_System.Contacts {
         public event GetDataCompletedEventHandler GetDataCompleted;
         
         /// <remarks/>
+        public event GetUserCompletedEventHandler GetUserCompleted;
+        
+        /// <remarks/>
         public event GetConCompletedEventHandler GetConCompleted;
         
         /// <remarks/>
         public event ImportContactsCompletedEventHandler ImportContactsCompleted;
+        
+        /// <remarks/>
+        public event grpCreatorCompletedEventHandler grpCreatorCompleted;
         
         /// <remarks/>
         public event SSTGCompletedEventHandler SSTGCompleted;
@@ -344,28 +354,30 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/AddGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void AddGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string GrpName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string userId, out bool AddGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddGroupResultSpecified) {
+        public void AddGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string GrpName, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] ref string userId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userName, out bool AddGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool AddGroupResultSpecified) {
             object[] results = this.Invoke("AddGroup", new object[] {
                         GrpName,
-                        userId});
+                        userId,
+                        userName});
             userId = ((string)(results[0]));
             AddGroupResult = ((bool)(results[1]));
             AddGroupResultSpecified = ((bool)(results[2]));
         }
         
         /// <remarks/>
-        public void AddGroupAsync(string GrpName, string userId) {
-            this.AddGroupAsync(GrpName, userId, null);
+        public void AddGroupAsync(string GrpName, string userId, string userName) {
+            this.AddGroupAsync(GrpName, userId, userName, null);
         }
         
         /// <remarks/>
-        public void AddGroupAsync(string GrpName, string userId, object userState) {
+        public void AddGroupAsync(string GrpName, string userId, string userName, object userState) {
             if ((this.AddGroupOperationCompleted == null)) {
                 this.AddGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAddGroupOperationCompleted);
             }
             this.InvokeAsync("AddGroup", new object[] {
                         GrpName,
-                        userId}, this.AddGroupOperationCompleted, userState);
+                        userId,
+                        userName}, this.AddGroupOperationCompleted, userState);
         }
         
         private void OnAddGroupOperationCompleted(object arg) {
@@ -519,27 +531,29 @@ namespace MultiUser_Contact_Management_System.Contacts {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/UpdateGroup", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void UpdateGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpname, out bool UpdateGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateGroupResultSpecified) {
+        public void UpdateGroup([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpid, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string grpname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, out bool UpdateGroupResult, [System.Xml.Serialization.XmlIgnoreAttribute()] out bool UpdateGroupResultSpecified) {
             object[] results = this.Invoke("UpdateGroup", new object[] {
                         grpid,
-                        grpname});
+                        grpname,
+                        username});
             UpdateGroupResult = ((bool)(results[0]));
             UpdateGroupResultSpecified = ((bool)(results[1]));
         }
         
         /// <remarks/>
-        public void UpdateGroupAsync(string grpid, string grpname) {
-            this.UpdateGroupAsync(grpid, grpname, null);
+        public void UpdateGroupAsync(string grpid, string grpname, string username) {
+            this.UpdateGroupAsync(grpid, grpname, username, null);
         }
         
         /// <remarks/>
-        public void UpdateGroupAsync(string grpid, string grpname, object userState) {
+        public void UpdateGroupAsync(string grpid, string grpname, string username, object userState) {
             if ((this.UpdateGroupOperationCompleted == null)) {
                 this.UpdateGroupOperationCompleted = new System.Threading.SendOrPostCallback(this.OnUpdateGroupOperationCompleted);
             }
             this.InvokeAsync("UpdateGroup", new object[] {
                         grpid,
-                        grpname}, this.UpdateGroupOperationCompleted, userState);
+                        grpname,
+                        username}, this.UpdateGroupOperationCompleted, userState);
         }
         
         private void OnUpdateGroupOperationCompleted(object arg) {
@@ -553,28 +567,59 @@ namespace MultiUser_Contact_Management_System.Contacts {
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
-        public myGroup[] GetData() {
-            object[] results = this.Invoke("GetData", new object[0]);
+        public myGroup[] GetData([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string _uid) {
+            object[] results = this.Invoke("GetData", new object[] {
+                        _uid});
             return ((myGroup[])(results[0]));
         }
         
         /// <remarks/>
-        public void GetDataAsync() {
-            this.GetDataAsync(null);
+        public void GetDataAsync(string _uid) {
+            this.GetDataAsync(_uid, null);
         }
         
         /// <remarks/>
-        public void GetDataAsync(object userState) {
+        public void GetDataAsync(string _uid, object userState) {
             if ((this.GetDataOperationCompleted == null)) {
                 this.GetDataOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetDataOperationCompleted);
             }
-            this.InvokeAsync("GetData", new object[0], this.GetDataOperationCompleted, userState);
+            this.InvokeAsync("GetData", new object[] {
+                        _uid}, this.GetDataOperationCompleted, userState);
         }
         
         private void OnGetDataOperationCompleted(object arg) {
             if ((this.GetDataCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.GetDataCompleted(this, new GetDataCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+        public myUser[] GetUser() {
+            object[] results = this.Invoke("GetUser", new object[0]);
+            return ((myUser[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void GetUserAsync() {
+            this.GetUserAsync(null);
+        }
+        
+        /// <remarks/>
+        public void GetUserAsync(object userState) {
+            if ((this.GetUserOperationCompleted == null)) {
+                this.GetUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGetUserOperationCompleted);
+            }
+            this.InvokeAsync("GetUser", new object[0], this.GetUserOperationCompleted, userState);
+        }
+        
+        private void OnGetUserOperationCompleted(object arg) {
+            if ((this.GetUserCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.GetUserCompleted(this, new GetUserCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -646,6 +691,36 @@ namespace MultiUser_Contact_Management_System.Contacts {
             if ((this.ImportContactsCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ImportContactsCompleted(this, new ImportContactsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/grpCreator", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string grpCreator([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string userId) {
+            object[] results = this.Invoke("grpCreator", new object[] {
+                        userId});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void grpCreatorAsync(string userId) {
+            this.grpCreatorAsync(userId, null);
+        }
+        
+        /// <remarks/>
+        public void grpCreatorAsync(string userId, object userState) {
+            if ((this.grpCreatorOperationCompleted == null)) {
+                this.grpCreatorOperationCompleted = new System.Threading.SendOrPostCallback(this.OngrpCreatorOperationCompleted);
+            }
+            this.InvokeAsync("grpCreator", new object[] {
+                        userId}, this.grpCreatorOperationCompleted, userState);
+        }
+        
+        private void OngrpCreatorOperationCompleted(object arg) {
+            if ((this.grpCreatorCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.grpCreatorCompleted(this, new grpCreatorCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -941,7 +1016,7 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1002,7 +1077,7 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1115,11 +1190,110 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem")]
+    public partial class myUser {
+        
+        private bool userIsAdminField;
+        
+        private bool userIsAdminFieldSpecified;
+        
+        private string useridField;
+        
+        private string usernameField;
+        
+        private string userpwdField;
+        
+        private string emailField;
+        
+        private string mobilenoField;
+        
+        /// <remarks/>
+        public bool UserIsAdmin {
+            get {
+                return this.userIsAdminField;
+            }
+            set {
+                this.userIsAdminField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool UserIsAdminSpecified {
+            get {
+                return this.userIsAdminFieldSpecified;
+            }
+            set {
+                this.userIsAdminFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Userid {
+            get {
+                return this.useridField;
+            }
+            set {
+                this.useridField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Username {
+            get {
+                return this.usernameField;
+            }
+            set {
+                this.usernameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Userpwd {
+            get {
+                return this.userpwdField;
+            }
+            set {
+                this.userpwdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mobileno {
+            get {
+                return this.mobilenoField;
+            }
+            set {
+                this.mobilenoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void IsValidUserCompletedEventHandler(object sender, IsValidUserCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class IsValidUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1157,15 +1331,15 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void IsUserRegisterCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void RecoverPwdECompletedEventHandler(object sender, RecoverPwdECompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RecoverPwdECompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1187,11 +1361,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void RecoverPwdSCompletedEventHandler(object sender, RecoverPwdSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RecoverPwdSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1213,11 +1387,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void ChangePwdCompletedEventHandler(object sender, ChangePwdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ChangePwdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1247,11 +1421,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void AddGroupCompletedEventHandler(object sender, AddGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1289,11 +1463,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void AddContactCompletedEventHandler(object sender, AddContactCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class AddContactCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1323,11 +1497,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void DeleteContactCompletedEventHandler(object sender, DeleteContactCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteContactCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1357,11 +1531,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void UpdateContactsCompletedEventHandler(object sender, UpdateContactsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1391,11 +1565,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void DeleteGroupCompletedEventHandler(object sender, DeleteGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class DeleteGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1425,11 +1599,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void UpdateGroupCompletedEventHandler(object sender, UpdateGroupCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class UpdateGroupCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1459,11 +1633,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1485,11 +1659,37 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void GetUserCompletedEventHandler(object sender, GetUserCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class GetUserCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal GetUserCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public myUser[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((myUser[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void GetConCompletedEventHandler(object sender, GetConCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetConCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1511,11 +1711,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void ImportContactsCompletedEventHandler(object sender, ImportContactsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ImportContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1537,11 +1737,37 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void grpCreatorCompletedEventHandler(object sender, grpCreatorCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class grpCreatorCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal grpCreatorCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SSTGCompletedEventHandler(object sender, SSTGCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SSTGCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1563,11 +1789,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SearchCbyNameCompletedEventHandler(object sender, SearchCbyNameCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchCbyNameCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1589,11 +1815,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SearchCbyDobCompletedEventHandler(object sender, SearchCbyDobCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchCbyDobCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1615,11 +1841,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SearchCbyEmailCompletedEventHandler(object sender, SearchCbyEmailCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchCbyEmailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1641,11 +1867,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void ShowContactsSMSCompletedEventHandler(object sender, ShowContactsSMSCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowContactsSMSCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1667,11 +1893,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SearchCbyMobCompletedEventHandler(object sender, SearchCbyMobCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SearchCbyMobCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1693,11 +1919,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void SSTCCompletedEventHandler(object sender, SSTCCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class SSTCCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -1719,11 +1945,11 @@ namespace MultiUser_Contact_Management_System.Contacts {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void ShowAllContactsCompletedEventHandler(object sender, ShowAllContactsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ShowAllContactsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

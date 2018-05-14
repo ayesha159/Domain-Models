@@ -15,6 +15,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="myGroup" nillable="true" type="tns:myGroup" />
+  <xs:complexType name="ArrayOfmyUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="myUser" nillable="true" type="tns:myUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfmyUser" nillable="true" type="tns:ArrayOfmyUser" />
+  <xs:complexType name="myUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserIsAdmin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userpwd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="myUser" nillable="true" type="tns:myUser" />
   <xs:complexType name="ArrayOfmyContacts">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="myContacts" nillable="true" type="tns:myContacts" />

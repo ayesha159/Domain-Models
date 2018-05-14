@@ -55,6 +55,7 @@ namespace MultiUser_Contact_Management_System
                 if (lblShow.Text != "invalid user or User no Registered with this email")
                 {
                     SendEmailAdmin(txtEmail.Text, lblShow.Text);
+                    MessageBox.Show("Password has been sent by Email.");
                 }
             }
             else
@@ -69,6 +70,7 @@ namespace MultiUser_Contact_Management_System
                     sm.Opens();
                     sm.RecoverPwdbySMS(txtSMS.Text, lblShow.Text);
                     sm.Closes();
+                    MessageBox.Show("Password has been sent by SMS.");
                 }
             }
         }
@@ -89,7 +91,6 @@ namespace MultiUser_Contact_Management_System
         {
             try
             {
-                //client.Credentials = new System.Net.NetworkCredential("ayeshajabbar36@gmail.com", "mymomismylife123");
                 MailAddress From = new MailAddress("ayeshajabbar36@gmail.com", "Ayesha Jabbar PWD Recovery");
                 MailAddress Tos = new MailAddress(to, "");
                 MailMessage Message = new System.Net.Mail.MailMessage(From, Tos);
@@ -100,8 +101,7 @@ namespace MultiUser_Contact_Management_System
                 object local_status = Message;
                 SmtpClient client = new SmtpClient("smtp.gmail.com");
                 client.Host = "smtp.gmail.com";
-                //client.SendCompleted += new SendCompletedEventHandler(smtp_SendCompleted);
-                client.Port = 587;
+                                client.Port = 587;
                 client.EnableSsl = true;
                 client.Credentials = new System.Net.NetworkCredential("ayeshajabbar36@gmail.com", "mymomismylife123");
                 client.Send(Message);
@@ -110,7 +110,7 @@ namespace MultiUser_Contact_Management_System
             }
             catch (Exception ex)
             {
-                string s = ex.Message.ToString() + "<br>" + ex.StackTrace.ToString();
+                string s = ex.Message.ToString();
                 MessageBox.Show(s);
             }
         }

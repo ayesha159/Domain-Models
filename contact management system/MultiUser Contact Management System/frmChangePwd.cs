@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace MultiUser_Contact_Management_System
 {
@@ -25,10 +26,8 @@ namespace MultiUser_Contact_Management_System
             bool RePwd = false;
             Contacts.Service1 ser = new Contacts.Service1();
             ser.ChangePwd(myUtill.loginUser.Userid,txtOldPwd.Text,txtNewPwd.Text,txtRePwd.Text,out pwd, out RePwd);
-            //string i = MyUtill.loginUser.Userid;
-            //string i2 = MyUtill.loginUser.Userid.ToString();
             bool ret =  ChangePwd(myUtill.loginUser.Userid,txtOldPwd,txtNewPwd,txtRePwd);
-            //MessageBox.Show(ret.ToString());
+            MessageBox.Show("Password Changed Successfully");
         }
 
         public bool ChangePwd(string _id,TextBox _pOld,TextBox pNew,TextBox pNewRe)

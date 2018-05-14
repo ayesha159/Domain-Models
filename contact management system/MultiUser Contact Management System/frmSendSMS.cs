@@ -29,15 +29,14 @@ namespace MultiUser_Contact_Management_System
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            if (comboBox1.Items.Count == 0)
+            { MessageBox.Show("Add Group Please !"); return; }
             Contacts.Service1 sr2 = new Contacts.Service1();
             BindingSource b = new BindingSource();
             b.DataSource = sr2.SSTC(myUtill.loginUser.Userid, comboBox1.SelectedValue.ToString());
-           
             foreach (DataGridViewRow gv in gvSMS.Rows)
             {
                 string s = gv.Cells[3].Value.ToString();
-
-                MessageBox.Show(s);
                 {
                     RecPwdbySMS sm = new RecPwdbySMS();
                     sm.SetComPort("com4");
@@ -49,13 +48,14 @@ namespace MultiUser_Contact_Management_System
 
             }
 
+            MessageBox.Show("Your message has been sent");
         }
 
         private void frmSendSMS_Load(object sender, EventArgs e)
         {
             Contacts.Service1 ser = new Contacts.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = ser.GetData();
+            bs.DataSource = ser.GetData(myUtill.loginUser.Userid);
             comboBox1.ValueMember = "grpId";
             comboBox1.DisplayMember = "grpName";
             comboBox1.DataSource = bs;

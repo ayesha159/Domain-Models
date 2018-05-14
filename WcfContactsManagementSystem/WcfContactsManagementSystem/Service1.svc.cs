@@ -31,7 +31,7 @@ namespace WcfContactsManagementSystem
         {
             myUser u = new myUser();
 
-            int _lastUserid = 1;
+            int _lastUserid = 0;
             foreach (myUser usr in dataClass.usersList)
             {
                 _lastUserid = Convert.ToInt16(usr.Userid);
@@ -39,11 +39,17 @@ namespace WcfContactsManagementSystem
             }
             _lastUserid++;
 
+            bool _tf = false;
+            if (_lastUserid == 1) _tf = true;
+            else _tf = false;
+
             u.Userid = _lastUserid.ToString();
             u.Username = userName;
             u.Userpwd = password;
             u.email = Email;
             u.mobileno = MobileNo;
+            u.UserIsAdmin = _tf;
+
             dataClass.usersList.Add(u);
         }
 
@@ -73,6 +79,8 @@ namespace WcfContactsManagementSystem
 
             return "invalid user or User no Registered with this Mobile No.";
         }
+
+
 
         public bool ChangePwd(string Id, string txtOld, string txtNew, string txtNewRe)
         {
@@ -136,7 +144,7 @@ namespace WcfContactsManagementSystem
 
         }
 
-        public bool AddGroup(string GrpName, ref string userId)
+        public bool AddGroup(string GrpName, ref string userId, string userName)
         {
             int _id = 0;
             string _name = "";
@@ -152,7 +160,7 @@ namespace WcfContactsManagementSystem
             g.GrpName = GrpName;
             g.GrpId = _id.ToString();
             g.Userid = myUtill.loginUser.Userid;
- 
+            g.Username = userName;
             dataClass.usersGroupsArrayList.Add(g);
             return true;
         }
@@ -171,7 +179,7 @@ namespace WcfContactsManagementSystem
             dataClass.usersGroupsArrayList.RemoveAt(Convert.ToInt16(c));
             return true;
         }
-        public bool UpdateGroup(string grpid, string grpname)
+        public bool UpdateGroup(string grpid, string grpname, string username)
         {
            ;
             // algo1
@@ -187,7 +195,7 @@ namespace WcfContactsManagementSystem
                 }
                 else
                 myGrp1.GrpName = grpname;
-
+                myGrp1.Username = username;
                 dataClass.usersGroupsArrayListtmp.Add(myGrp1);
 
             }
@@ -206,9 +214,40 @@ namespace WcfContactsManagementSystem
             return true;
         }
 
-        public List<myGroup> GetData()
+        public List<myGroup> GetData(string _id)
         {
-            return dataClass.usersGroupsArrayList;
+            dataClass.usersGroupsArrayListtmp.Clear();
+            if (_id == "1")
+            {
+                foreach (myGroup g in dataClass.usersGroupsArrayList)
+                {
+                        myGroup grp = new myGroup();
+                        grp.GrpId = g.GrpId;
+                        grp.GrpName = g.GrpName;
+                        grp.Userid = g.Userid;
+                    grp.Username = grpCreator(_id);
+                        dataClass.usersGroupsArrayListtmp.Add(grp);
+                }
+                return dataClass.usersGroupsArrayListtmp;
+            }
+            else
+            {
+                foreach(myGroup g in dataClass.usersGroupsArrayList)
+                {
+                    if (g.Userid == _id)
+                    {
+                        myGroup grp = new myGroup();
+                        grp.GrpId = g.GrpId;
+                        grp.GrpName = g.GrpName;
+                        grp.Userid = g.Userid;
+                        //grp.Username = grpCreator(_id);
+                        dataClass.usersGroupsArrayListtmp.Add(grp);
+                    }
+                }
+                return dataClass.usersGroupsArrayListtmp;
+            }
+
+            return null;
         }
         
         public List<myContacts> GetCon()
@@ -217,6 +256,11 @@ namespace WcfContactsManagementSystem
 
         }
 
+        public List<myUser> GetUser()
+        {
+            return dataClass.usersList;
+
+        }
         public bool AddContact(string userId, string grpId, string name, string DOB, string moblieNo, string email, string address)
         {
             int _id = 0;
@@ -508,6 +552,23 @@ namespace WcfContactsManagementSystem
             }
             return dataClass.SearchList;
         }
+public string grpCreator(string userId)
+        {
+            foreach(myUser u in dataClass.usersList)
+            {
+                if (userId == u.Userid)
+                {
+                 return u.Username;
+                }
+                          
+            }
+            return "";
+        }
+
+
+
+
+
 
     }
 }

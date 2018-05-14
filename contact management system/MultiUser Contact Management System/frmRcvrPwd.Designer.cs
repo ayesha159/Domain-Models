@@ -35,11 +35,13 @@
             this.txtSMS = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.RcvrPwd.SuspendLayout();
             this.SuspendLayout();
             // 
             // RcvrPwd
             // 
+            this.RcvrPwd.Controls.Add(this.label1);
             this.RcvrPwd.Controls.Add(this.lblShow);
             this.RcvrPwd.Controls.Add(this.OPTSMS);
             this.RcvrPwd.Controls.Add(this.OPTEMAIL);
@@ -62,6 +64,7 @@
             this.lblShow.Size = new System.Drawing.Size(16, 13);
             this.lblShow.TabIndex = 6;
             this.lblShow.Text = "...";
+            this.lblShow.Visible = false;
             // 
             // OPTSMS
             // 
@@ -105,13 +108,22 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(208, 97);
+            this.button1.Location = new System.Drawing.Point(221, 97);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 5;
             this.button1.Text = "Recover ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(218, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Ex: +923001238833";
             // 
             // frmRcvrPwd
             // 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblShow;
+        private System.Windows.Forms.Label label1;
     }
 }

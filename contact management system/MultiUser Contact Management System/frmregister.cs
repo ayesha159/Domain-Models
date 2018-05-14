@@ -21,7 +21,7 @@ namespace MultiUser_Contact_Management_System
         {
             Contacts.Service1 ser = new Contacts.Service1();
             ser.IsUserRegister(txtUsr.Text, txtPwd.Text, txtEm.Text,txtCell.Text);
-         
+             
             if (txtUsr.Text.Length == 0)
             {
                txtUsr.Focus();

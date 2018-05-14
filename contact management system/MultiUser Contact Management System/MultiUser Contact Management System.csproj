@@ -35,6 +35,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +84,7 @@
     <Compile Include="MyContact.designer.cs">
       <DependentUpon>MyContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContactsX.cs" />
     <Compile Include="MyGroup.cs" />
     <Compile Include="MyGroups.cs">
       <SubType>Form</SubType>
@@ -107,6 +109,9 @@
       <DependentUpon>frmregister.cs</DependentUpon>
     </Compile>
     <Compile Include="RecPwdbySMS.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Web References\Contacts\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,9 +149,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frmregister.resx">
       <DependentUpon>frmregister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,6 +170,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Contacts\myGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Contacts\myUser.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Contacts\Reference.map">
@@ -207,12 +219,15 @@
     <None Include="Web References\Contacts\Service1.disco" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\users-png-image-78357.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>
       <VersionMinor>4</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
@@ -221,7 +236,7 @@
       <VersionMajor>1</VersionMajor>
       <VersionMinor>6</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
@@ -230,7 +245,7 @@
       <VersionMajor>5</VersionMajor>
       <VersionMinor>3</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
+      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>

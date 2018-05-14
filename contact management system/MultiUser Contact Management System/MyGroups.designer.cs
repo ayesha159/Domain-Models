@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.gvGrp = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -38,25 +41,48 @@
             this.lblg = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvGrp)).BeginInit();
             this.SuspendLayout();
             // 
             // gvGrp
             // 
             this.gvGrp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvGrp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
             this.gvGrp.Location = new System.Drawing.Point(65, 108);
             this.gvGrp.Name = "gvGrp";
             this.gvGrp.ShowCellToolTips = false;
-            this.gvGrp.Size = new System.Drawing.Size(347, 150);
+            this.gvGrp.Size = new System.Drawing.Size(350, 117);
             this.gvGrp.TabIndex = 0;
             this.gvGrp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvGrp_CellContentClick);
             this.gvGrp.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvGrp_CellEnter);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "GrpId";
+            this.Column1.HeaderText = "GrpId";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "GrpName";
+            this.Column2.HeaderText = "GrpName";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Username";
+            this.Column3.HeaderText = "Username";
+            this.Column3.Name = "Column3";
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(337, 264);
+            this.btnUpdate.Location = new System.Drawing.Point(340, 290);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 27);
             this.btnUpdate.TabIndex = 1;
@@ -88,7 +114,7 @@
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(256, 264);
+            this.btnDel.Location = new System.Drawing.Point(259, 290);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 27);
             this.btnDel.TabIndex = 7;
@@ -99,7 +125,7 @@
             // lblmsg
             // 
             this.lblmsg.AutoSize = true;
-            this.lblmsg.Location = new System.Drawing.Point(62, 274);
+            this.lblmsg.Location = new System.Drawing.Point(62, 278);
             this.lblmsg.Name = "lblmsg";
             this.lblmsg.Size = new System.Drawing.Size(35, 13);
             this.lblmsg.TabIndex = 8;
@@ -116,12 +142,11 @@
             // lblg
             // 
             this.lblg.AutoSize = true;
-            this.lblg.Location = new System.Drawing.Point(108, 274);
+            this.lblg.Location = new System.Drawing.Point(62, 307);
             this.lblg.Name = "lblg";
             this.lblg.Size = new System.Drawing.Size(35, 13);
             this.lblg.TabIndex = 10;
             this.lblg.Text = "label3";
-            this.lblg.Visible = false;
             // 
             // label2
             // 
@@ -136,7 +161,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(175, 264);
+            this.button1.Location = new System.Drawing.Point(178, 290);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 12;
@@ -144,19 +169,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtid
+            // txtId
             // 
-            this.txtid.Location = new System.Drawing.Point(175, 64);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(100, 20);
-            this.txtid.TabIndex = 13;
+            this.txtId.Location = new System.Drawing.Point(256, 238);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(62, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "ForUpdateAndDeleteEnterGroupId";
             // 
             // MyGroups
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 342);
-            this.Controls.Add(this.txtid);
+            this.ClientSize = new System.Drawing.Size(463, 329);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblg);
@@ -190,6 +225,10 @@
         private System.Windows.Forms.Label lblg;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

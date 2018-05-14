@@ -27,6 +27,10 @@ namespace MultiUser_Contact_Management_System
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if (cmbCon.Items.Count == 0)
+            {
+                MessageBox.Show("Add Group Please !");return;
+            }
             bool addConR;
             bool AddCons;
             Contacts.Service1 s = new Contacts.Service1();
@@ -43,7 +47,7 @@ namespace MultiUser_Contact_Management_System
         {
             Contacts.Service1 ser = new Contacts.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = ser.GetData();
+            bs.DataSource = ser.GetData(myUtill.loginUser.Userid);
             cmbCon.ValueMember = "grpId";
             cmbCon.DisplayMember = "grpName";
             cmbCon.DataSource = bs;
@@ -52,11 +56,15 @@ namespace MultiUser_Contact_Management_System
 
         private void gvCon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //myContacts cn = new myContacts();
+            //txtName.Text = gvCon.CurrentRow.Cells[0].Value.ToString();
+            //MessageBox.Show("ldkfjdlk");
         }
 
         private void gvCon_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
+           //int currentRow = gvCon.CurrentCell.RowIndex;
+           // lbli.Text = currentRow.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,14 +109,12 @@ namespace MultiUser_Contact_Management_System
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             Contacts.Service1 ser = new Contacts.Service1();
-            //ser.SearchContacts(myUtill.loginUser.Userid,cmbCon.SelectedValue.ToString(), txtName.Text);
+          //ser.SearchContacts(myUtill.loginUser.Userid,cmbCon.SelectedValue.ToString(), txtName.Text);
 
             BindingSource b = new BindingSource();
             b.DataSource = ser.SearchCbyName(myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString(), txtName.Text);
             gvCon.DataSource = b;
-
 
 
         }
@@ -126,8 +132,9 @@ namespace MultiUser_Contact_Management_System
 
         private void btnSDOB_Click(object sender, EventArgs e)
         {
-
             Contacts.Service1 ser = new Contacts.Service1();
+            //ser.SearchContacts(myUtill.loginUser.Userid,cmbCon.SelectedValue.ToString(), txtName.Text);
+
             BindingSource b = new BindingSource();
             b.DataSource = ser.SearchCbyDob(myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString(), txtDOB.Text);
             gvCon.DataSource = b;
@@ -138,6 +145,8 @@ namespace MultiUser_Contact_Management_System
         private void btnSMob_Click(object sender, EventArgs e)
         {
             Contacts.Service1 ser = new Contacts.Service1();
+            //ser.SearchContacts(myUtill.loginUser.Userid,cmbCon.SelectedValue.ToString(), txtName.Text);
+
             BindingSource b = new BindingSource();
             b.DataSource = ser.SearchCbyMob(myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString(), txtMOB.Text);
             gvCon.DataSource = b;
@@ -157,7 +166,6 @@ namespace MultiUser_Contact_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             Contacts.Service1 ser = new Contacts.Service1();
             BindingSource b = new BindingSource();
             b.DataSource = ser.SearchCbyEmail(myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString(), txtEMAIL.Text);
@@ -171,6 +179,10 @@ namespace MultiUser_Contact_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (cmbCon.Items.Count == 0)
+            {
+                MessageBox.Show("Add Group Please !"); return;
+            }
 
 
             Excel.Application xlApp;
@@ -180,11 +192,11 @@ namespace MultiUser_Contact_Management_System
 
             string str;
             int rCnt;
-
+       
             int rw = 0;
             int cl = 0;
             string filename = "";
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 filename = openFileDialog1.FileName;
             }
@@ -208,14 +220,16 @@ namespace MultiUser_Contact_Management_System
                 {
 
                     _name = Convert.ToString((range.Cells[rCnt, 1] as Excel.Range).Value2);
-                    _mob = Convert.ToString((range.Cells[rCnt, 2] as Excel.Range).Value2);
+                    _mob ="+" + Convert.ToString((range.Cells[rCnt, 2] as Excel.Range).Value2);
                     _dob = Convert.ToString((range.Cells[rCnt, 3] as Excel.Range).Value2);
                     _email = Convert.ToString((range.Cells[rCnt, 4] as Excel.Range).Value2);
                     _address = Convert.ToString((range.Cells[rCnt, 5] as Excel.Range).Value2);
                     str = _name + ", " + _mob + ", " + _dob;
                     Contacts.Service1 ser = new Contacts.Service1();
-                    string sv = ser.ImportContacts(_name, _dob, _mob, _email, _address, myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString());
-
+                    try
+                    {
+                        string sv = ser.ImportContacts(_name, _dob, _mob, _email, _address, myUtill.loginUser.Userid, cmbCon.SelectedValue.ToString());
+                    } catch( Exception ex) { }
                     BindingSource b = new BindingSource();
                     b.DataSource = ser.GetCon();
                     gvCon.DataSource = b;
@@ -231,7 +245,6 @@ namespace MultiUser_Contact_Management_System
             Marshal.ReleaseComObject(xlApp);
 
 
-
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
@@ -241,7 +254,7 @@ namespace MultiUser_Contact_Management_System
         private void btnClr_Click(object sender, EventArgs e)
         {
             Contacts.Service1 ser = new Contacts.Service1();
-
+            
             BindingSource b = new BindingSource();
             b.DataSource = ser.GetCon();
             gvCon.DataSource = b;

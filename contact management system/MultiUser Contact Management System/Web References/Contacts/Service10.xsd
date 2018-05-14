@@ -83,6 +83,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="GrpName" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -166,6 +167,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="grpid" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="grpname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -178,13 +180,27 @@
   </xs:element>
   <xs:element name="GetData">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_uid" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataResponse">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="GetDataResult" nillable="true" type="q1:ArrayOfmyGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUser">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="GetUserResult" nillable="true" type="q2:ArrayOfmyUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -196,7 +212,7 @@
   <xs:element name="GetConResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="GetConResult" nillable="true" type="q2:ArrayOfmyContacts" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="GetConResult" nillable="true" type="q3:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -220,6 +236,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="grpCreator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="grpCreatorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="grpCreatorResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="SSTG">
     <xs:complexType>
       <xs:sequence>
@@ -231,7 +261,7 @@
   <xs:element name="SSTGResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SSTGResult" nillable="true" type="q3:ArrayOfmyContacts" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SSTGResult" nillable="true" type="q4:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -247,7 +277,7 @@
   <xs:element name="SearchCbyNameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyNameResult" nillable="true" type="q4:ArrayOfmyContacts" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyNameResult" nillable="true" type="q5:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -263,7 +293,7 @@
   <xs:element name="SearchCbyDobResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyDobResult" nillable="true" type="q5:ArrayOfmyContacts" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyDobResult" nillable="true" type="q6:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -279,7 +309,7 @@
   <xs:element name="SearchCbyEmailResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyEmailResult" nillable="true" type="q6:ArrayOfmyContacts" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyEmailResult" nillable="true" type="q7:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -294,7 +324,7 @@
   <xs:element name="ShowContactsSMSResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="ShowContactsSMSResult" nillable="true" type="q7:ArrayOfmyContacts" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="ShowContactsSMSResult" nillable="true" type="q8:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -310,7 +340,7 @@
   <xs:element name="SearchCbyMobResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyMobResult" nillable="true" type="q8:ArrayOfmyContacts" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SearchCbyMobResult" nillable="true" type="q9:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -325,7 +355,7 @@
   <xs:element name="SSTCResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SSTCResult" nillable="true" type="q9:ArrayOfmyContacts" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="SSTCResult" nillable="true" type="q10:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -340,7 +370,7 @@
   <xs:element name="ShowAllContactsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="ShowAllContactsResult" nillable="true" type="q10:ArrayOfmyContacts" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WcfContactsManagementSystem" minOccurs="0" name="ShowAllContactsResult" nillable="true" type="q11:ArrayOfmyContacts" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

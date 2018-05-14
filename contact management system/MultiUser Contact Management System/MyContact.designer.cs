@@ -55,13 +55,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClr = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvCon)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCon
@@ -332,29 +330,20 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(555, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(115, 137);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnClr
             // 
             this.btnClr.Location = new System.Drawing.Point(460, 226);
             this.btnClr.Name = "btnClr";
             this.btnClr.Size = new System.Drawing.Size(71, 30);
             this.btnClr.TabIndex = 26;
-            this.btnClr.Text = "ShowAll";
+            this.btnClr.Text = "Clear";
             this.btnClr.UseVisualStyleBackColor = true;
             this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(86, 435);
+            this.label3.Location = new System.Drawing.Point(84, 439);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 13);
             this.label3.TabIndex = 29;
@@ -375,7 +364,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnClr);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -405,7 +393,6 @@
             this.Load += new System.EventHandler(this.MyContact_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvCon)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,7 +426,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btnClr;
         private System.Windows.Forms.Label label3;

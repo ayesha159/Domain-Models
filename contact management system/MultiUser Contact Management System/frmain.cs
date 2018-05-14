@@ -34,7 +34,44 @@ namespace MultiUser_Contact_Management_System
 
         private void frmain_Load(object sender, EventArgs e)
         {
-       
+            gvUsers.AutoGenerateColumns = false;
+            Contacts.Service1 s = new Contacts.Service1();
+            BindingSource b = new BindingSource();
+            b.DataSource = s.GetUser();
+            gvUsers.DataSource = b;
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // here you can have column reference by using e.ColumnIndex
+            
+
+            
+
+            // ... do something .
+        }
+
+        private void gvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void gvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                //MessageBox.Show("You Have Selected " + (e.RowIndex + 1).ToString() + " Row Button");
+                string s = (gvUsers.Rows[e.RowIndex].DataBoundItem).ToString();
+                MessageBox.Show(s);
+
+
+            }
         }
     }
 }

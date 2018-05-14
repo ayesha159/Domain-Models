@@ -61,6 +61,7 @@
             this.txtRePwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePwd.Location = new System.Drawing.Point(202, 111);
             this.txtRePwd.Name = "txtRePwd";
+            this.txtRePwd.PasswordChar = '*';
             this.txtRePwd.Size = new System.Drawing.Size(220, 24);
             this.txtRePwd.TabIndex = 8;
             // 
@@ -110,6 +111,7 @@
             this.txtNewPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPwd.Location = new System.Drawing.Point(202, 77);
             this.txtNewPwd.Name = "txtNewPwd";
+            this.txtNewPwd.PasswordChar = '*';
             this.txtNewPwd.Size = new System.Drawing.Size(220, 24);
             this.txtNewPwd.TabIndex = 4;
             // 
@@ -118,6 +120,7 @@
             this.txtOldPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOldPwd.Location = new System.Drawing.Point(202, 45);
             this.txtOldPwd.Name = "txtOldPwd";
+            this.txtOldPwd.PasswordChar = '*';
             this.txtOldPwd.Size = new System.Drawing.Size(220, 24);
             this.txtOldPwd.TabIndex = 1;
             // 

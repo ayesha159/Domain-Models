@@ -90,9 +90,8 @@
             this.lblMsg.AutoSize = true;
             this.lblMsg.Location = new System.Drawing.Point(169, 136);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(27, 13);
+            this.lblMsg.Size = new System.Drawing.Size(0, 13);
             this.lblMsg.TabIndex = 5;
-            this.lblMsg.Text = "user";
             // 
             // linkLabel1
             // 

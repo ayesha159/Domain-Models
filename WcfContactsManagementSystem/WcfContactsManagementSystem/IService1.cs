@@ -30,7 +30,7 @@ namespace WcfContactsManagementSystem
 
         [OperationContract]
 
-        bool AddGroup(string GrpName , ref string userId );
+        bool AddGroup(string GrpName , ref string userId ,string userName);
         [OperationContract]
         bool AddContact(string userId, string grpId, string name,string DOB,string moblieNo, string email,string address);
         [OperationContract]
@@ -42,10 +42,13 @@ namespace WcfContactsManagementSystem
         bool DeleteGroup(string delGrp);
 
         [OperationContract]
-        bool UpdateGroup(string grpid, string grpname);
+        bool UpdateGroup(string grpid, string grpname, string username);
 
         [OperationContract]
-        List<myGroup> GetData();
+        List<myGroup> GetData(string _uid);
+
+        [OperationContract]
+        List<myUser> GetUser();
 
 
         [OperationContract]
@@ -54,7 +57,8 @@ namespace WcfContactsManagementSystem
         [OperationContract]
         string ImportContacts(string name, string DOB, string moblieNo, string email, string address, string userId, string grpId);
         [OperationContract]
-      
+        string grpCreator(string userId);
+        [OperationContract]
         List<myContacts> SSTG(string userid, string grpid);
 
         [OperationContract]
